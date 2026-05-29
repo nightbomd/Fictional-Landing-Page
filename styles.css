@@ -2,40 +2,53 @@
     max-width: 100px;
     height: auto;
 }
+
 :root {
-  /* Primary brand colors */
-  --color-forest:     #2C5F2E;   /* Dark green — headings, nav, primary buttons */
-  --color-gold:       #D4A017;   /* Warm gold — accents, borders, icon highlights */
-  --color-barn-red:   #8B2500;   /* Deep red — barn accent, secondary CTA */
+    /* Primary brand colors */
+    --color-forest: #2C5F2E;
+    /* Dark green — headings, nav, primary buttons */
+    --color-gold: #D4A017;
+    /* Warm gold — accents, borders, icon highlights */
+    --color-barn-red: #8B2500;
+    /* Deep red — barn accent, secondary CTA */
 
-  /* Neutral / background tones */
-  --color-cream:      #FAF3E0;   /* Off-white — light section backgrounds */
-  --color-parchment:  #EDE0C4;   /* Warm tan — card backgrounds, borders */
-  --color-earth:      #4A3728;   /* Dark brown — body text, dark accents */
+    /* Neutral / background tones */
+    --color-cream: #FAF3E0;
+    /* Off-white — light section backgrounds */
+    --color-parchment: #EDE0C4;
+    /* Warm tan — card backgrounds, borders */
+    --color-earth: #4A3728;
+    /* Dark brown — body text, dark accents */
 
-  /* Supporting greens */
-  --color-meadow:     #5A7A3A;   /* Mid green — hover states, secondary elements */
-  --color-sage:       #8FAF7E;   /* Light green — badges, muted tags */
+    /* Supporting greens */
+    --color-meadow: #5A7A3A;
+    /* Mid green — hover states, secondary elements */
+    --color-sage: #8FAF7E;
+    /* Light green — badges, muted tags */
 
-  /* Font stacks */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Lato', Arial, sans-serif;
+    /* Font stacks */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Lato', Arial, sans-serif;
 }
+
 #navbar {
     background-color: var(--color-cream);
     padding: 1rem 2rem;
 }
+
 .nav-link {
     color: var(--color-earth) !important;
     font-family: var(--font-body);
     font-size: 1.1rem;
     margin-left: 1.5rem;
 }
+
 body {
     background-color: var(--color-cream);
     color: var(--color-earth) !important;
     font-family: var(--font-body);
 }
+
 #carouselExampleIndicators {
     width: 80%;
     margin: 2rem auto;
@@ -47,9 +60,29 @@ body {
     object-fit: cover;
     border-radius: 1rem;
 }
+
 .color-green {
     color: var(--color-forest) !important;
 }
+
 .subheading {
     font-size: 5rem;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(var(--scroll-distance));
+    }
+}
+
+#track-left {
+    animation: scrollLeft 8s linear infinite;
+}
+.product-container img {
+    height: 150px;
+    width: auto;
 }

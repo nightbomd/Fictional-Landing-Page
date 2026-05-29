@@ -33,3 +33,20 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".fade-in-up").forEach((el) => {
   observer.observe(el);
 });
+
+window.addEventListener("load", () => {
+  const trackLeft = document.getElementById("track-left");
+
+  if (trackLeft) {
+    trackLeft.innerHTML += trackLeft.innerHTML;
+
+    const originalWidth = trackLeft.scrollWidth / 2;
+
+     trackLeft.style.setProperty(
+        "--scroll-distance",
+        `-${originalWidth}px`
+    );
+  }
+
+})
+
