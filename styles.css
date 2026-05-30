@@ -66,7 +66,8 @@ body {
 }
 
 .subheading {
-    font-size: 5rem;
+  
+    color: var(--color-forest);
 }
 
 @keyframes scrollLeft {
@@ -78,11 +79,169 @@ body {
         transform: translateX(var(--scroll-distance));
     }
 }
+   .carousel-automatic-left,
+   .carousel-automatic-right {
+      overflow: hidden;
+      width: 100%; /* or set a fixed px width if w-25 isn't enough */
+    }
 
-#track-left {
-    animation: scrollLeft 8s linear infinite;
+    #track-left, #track-right {
+      overflow: hidden  ;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      width: max-content; /* lets the track grow beyond the container */
+    }
+    #track-left {
+      animation: scrollLeft 17s linear infinite;
+    }
+   
+
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to   { transform: translateX(var(--scroll-distance)); }
+    }
+  
+
+    .product-container {
+      text-align: center;
+      flex-shrink: 0; /* prevents items from squishing */
+    }
+
+    .product-container img {
+      height: 150px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .btn-primary {
+        background: var(--color-forest) !important;
+        border: none !important;
+        padding: 10px 20px 10px 20px;
+        
+    }
+    #track-left div {
+      transition: 0.3s ease;
+    }
+    #track-left div:hover {
+     transform: scale(1.1) translateY(-8px) rotate(2deg);
+      
+      font-weight: 800;
+    
+    }
+
+.view-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
 }
-.product-container img {
-    height: 150px;
-    width: auto;
+.btn {
+  transition: 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.product-container {
+  position: relative;
+}
+.product-container:hover .view-btn {
+  display: block;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+.cf-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.cf-card {
+  position: absolute;
+  width: 30%;
+  text-align: center;
+
+  height: 100%;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  color: white !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cf-card img {
+  height: 65%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.cf-card p {
+  font-size: 13px;
+
+  margin-top: 8px;
+}
+
+.cf-card.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  pointer-events: all;
+  z-index: 10;
+}
+
+.cf-card.prev {
+  transform: translateX(-100%) scale(0.67);
+  opacity: 0.5;
+  pointer-events: all;
+  z-index: 5;
+}
+
+.cf-card.next {
+  transform: translateX(100%) scale(0.67);
+  opacity: 0.5;
+  pointer-events: all;
+  z-index: 5;
+}
+
+.cf-btn {
+  background: var(--color-earth);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 18px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.cf-btn:hover { opacity: 0.8; }
+
+.cf-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.cf-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cf-dot.active {
+  background: #333;
+  transform: scale(1.4);
 }
