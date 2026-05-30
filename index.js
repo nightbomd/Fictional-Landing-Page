@@ -1,3 +1,24 @@
+
+const sunflower = document.getElementById("sunflower");
+let x = 0, y = 0;
+let targetX = 0, targetY = 0;
+
+document.addEventListener("mousemove", (e) => {
+  targetX = e.clientX;
+  targetY = e.clientY;
+});
+
+function animate() {
+  x += (targetX - x) * 0.12; 
+  y += (targetY - y) * 0.08;
+
+  sunflower.style.left = x + "px";
+  sunflower.style.top = y + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const el = entry.target;
@@ -45,11 +66,11 @@ window.addEventListener("load", () => {
 
   track.addEventListener("mouseover", () => {
     track.style.animationPlayState = "paused";
-});
+  });
 
-track.addEventListener("mouseout", () => {
+  track.addEventListener("mouseout", () => {
     track.style.animationPlayState = "running";
-});
+  });
 
 
 });

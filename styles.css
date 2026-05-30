@@ -30,6 +30,10 @@
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Lato', Arial, sans-serif;
 }
+.bg-green {
+  background-color: var(--color-forest) !important;
+  color: white !important;
+}
 
 #navbar {
     background-color: var(--color-cream);
@@ -244,4 +248,12 @@ body {
 .cf-dot.active {
   background: #333;
   transform: scale(1.4);
+}
+#sunflower {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  pointer-events: none; /* so it doesn't block clicks */
+  z-index: 9999;
+  transform: translate(-50%, -50%); /* centers it on the cursor */
 }
