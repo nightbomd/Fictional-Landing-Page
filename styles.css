@@ -257,3 +257,6 @@ body {
   z-index: 9999;
   transform: translate(-50%, -50%); /* centers it on the cursor */
 }
+.dif-color {
+  background: var(--color-parchment);
+}
