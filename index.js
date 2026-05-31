@@ -19,39 +19,52 @@ function animate() {
 }
 
 animate();
+const animations = {
+  fadeUp: {
+    in: [
+      { opacity: 0, transform: "translateY(50px)" },
+      { opacity: 1, transform: "translateY(0)" }
+    ],
+    out: [
+      { opacity: 1, transform: "translateY(0)" },
+      { opacity: 0, transform: "translateY(50px)" }
+    ]
+  },
+
+  scale: {
+    in: [
+      { opacity: 0, transform: "scale(0)" },
+      { opacity: 1, transform: "scale(1)" }
+    ],
+    out: [
+      { opacity: 1, transform: "scale(1)" },
+      { opacity: 0, transform: "scale(0)" }
+    ]
+  }
+};
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const el = entry.target;
 
     if (entry.isIntersecting) {
-      el.animate(
-        [
-          { opacity: 0, transform: "translateY(50px)" },
-          { opacity: 1, transform: "translateY(0)" }
-        ],
-        {
-          duration: 800,
-          easing: "ease-out",
-          fill: "forwards"
-        }
-      );
-    } else {
-      el.animate(
-        [
-          { opacity: 1, transform: "translateY(0)" },
-          { opacity: 0, transform: "translateY(50px)" }
-        ],
-        {
-          duration: 800,
-          easing: "ease-in",
-          fill: "forwards"
-        }
-      );
+      const animationType = el.dataset.animation;
+      const animation = animations[animationType];
+
+      el.animate(animation.in, {
+        duration: 800,
+        easing: "ease-out",
+        fill: "forwards",
+        
+      });
+
+      // stop watching after first trigger
+      observer.unobserve(el);
     }
   });
 });
 
-document.querySelectorAll(".fade-in-up").forEach((el) => {
+document.querySelectorAll(".observe").forEach((el) => {
   observer.observe(el);
 });
 

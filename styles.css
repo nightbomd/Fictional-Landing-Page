@@ -260,3 +260,10 @@ body {
 .dif-color {
   background: var(--color-parchment);
 }
+#svg-home {
+  height: 40vh;
+  width: auto;
+}
+.wrapper {
+  gap: 15rem !important;
+}
