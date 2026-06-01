@@ -54,15 +54,15 @@ body {
 }
 
 #carouselExampleIndicators {
-    width: 80%;
-    margin: 2rem auto;
+    width: 100%;
+   
 }
 
 .carousel-item img {
     width: 50%;
     height: 500px;
     object-fit: cover;
-    border-radius: 1rem;
+   
 }
 
 .color-green {
@@ -266,4 +266,17 @@ body {
 }
 .wrapper {
   gap: 15rem !important;
+}
+/*Custom Cursor*/
+.product-img {
+  height: 400px !important;
+  width: auto;
+  margin: 1rem;
+}
+.btn-secondary {
+  background: #F7F3EA !important;
+  border: var(--color-forest) 2px solid !important;
+  padding: 10px 20px 10px 20px;
+  color: var(--color-forest) !important;
+  font-weight: 700;
 }
