@@ -62,7 +62,7 @@ const productContainers = [
 function createProductCard(product, index) {
     const container = document.createElement('div');
     container.className =
-        'product-container d-flex m-auto my-5 shadow  align-items-center text-center observe rounded-5 p-5 justify-content-center gap-5';
+        'product-container d-flex m-auto my-5 shadow  align-items-center text-center  rounded-5 p-5 justify-content-center gap-5';
     container.dataset.animation = 'fadeUp';
 
     if (product.background) {
