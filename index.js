@@ -9,7 +9,7 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function animate() {
-  x += (targetX - x) * 0.12; 
+  x += (targetX - x) * 0.12;
   y += (targetY - y) * 0.08;
 
   sunflower.style.left = x + "px";
@@ -17,6 +17,21 @@ function animate() {
 
   requestAnimationFrame(animate);
 }
+const navbar = document.getElementById("navbar");
+
+function handleScroll(nav) {
+window.addEventListener("scroll", () => {
+  if (nav.classList.contains("transparent")) {
+
+    if (window.scrollY > 300) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  }
+});
+}
+handleScroll(navbar)
 
 animate();
 const animations = {
@@ -55,7 +70,7 @@ const observer = new IntersectionObserver((entries) => {
         duration: 800,
         easing: "ease-out",
         fill: "forwards",
-        
+
       });
 
       // stop watching after first trigger
