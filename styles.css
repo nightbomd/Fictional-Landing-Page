@@ -304,3 +304,13 @@ body {
   background: white !important;
   color: var(--color-forest)
 }
+hr {
+  border: none;
+  height: 4px;
+  background-color: var(--color-gold);
+  margin: 2rem 0;
+  border-radius: 999px;
+}
+.bg-beige {
+  background: var(--color-parchment);
+}
