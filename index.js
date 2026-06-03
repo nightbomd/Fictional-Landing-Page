@@ -36,6 +36,7 @@ handleScroll(navbar)
 animate();
 const animations = {
   fadeUp: {
+    duration: 800,
     in: [
       { opacity: 0, transform: "translateY(50px)" },
       { opacity: 1, transform: "translateY(0)" }
@@ -47,6 +48,7 @@ const animations = {
   },
 
   scale: {
+    duration: 800,
     in: [
       { opacity: 0, transform: "scale(0)" },
       { opacity: 1, transform: "scale(1)" }
@@ -55,6 +57,14 @@ const animations = {
       { opacity: 1, transform: "scale(1)" },
       { opacity: 0, transform: "scale(0)" }
     ]
+  },
+
+  expand: {
+    duration: 500,
+    in: [
+    { width: "80%", borderRadius: "16px", margin: "200px auto", padding: "48px" },
+    { width: "100%", borderRadius: "0px", margin: "0 auto", padding: "48px" }
+  ],
   }
 };
 
@@ -67,17 +77,15 @@ const observer = new IntersectionObserver((entries) => {
       const animation = animations[animationType];
 
       el.animate(animation.in, {
-        duration: 800,
+        duration: animation.duration,
         easing: "ease-out",
         fill: "forwards",
-
       });
 
-      // stop watching after first trigger
       observer.unobserve(el);
     }
   });
-});
+}, { rootMargin: "0px 0px -25% 0px" });
 
 document.querySelectorAll(".observe").forEach((el) => {
   observer.observe(el);
