@@ -2,6 +2,13 @@
     max-width: 100px;
     height: auto;
 }
+body{
+  margin: 0;
+}
+main {
+  margin: 0;
+  padding: 0;
+}
 
 :root {
     /* Primary brand colors */
@@ -174,7 +181,7 @@ body {
   height: 100%;
   cursor: pointer;
   border-radius: 12px;
-  border: 1px solid #ddd;
+
   color: white !important;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
   opacity: 0;
@@ -217,8 +224,8 @@ body {
 }
 
 .cf-btn {
-  background: var(--color-earth);
-  border: 1px solid #ccc;
+  background: rgb(40, 39, 39);
+ 
   border-radius: 8px;
   padding: 8px 14px;
   cursor: pointer;
@@ -279,4 +286,9 @@ body {
   padding: 10px 20px 10px 20px;
   color: var(--color-forest) !important;
   font-weight: 700;
+}
+.section-brown {
+  background: var(--color-meadow) !important;
+  color: rgb(240, 240, 240) !important;
+ 
 }
