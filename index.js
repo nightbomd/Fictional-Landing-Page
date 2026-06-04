@@ -23,7 +23,7 @@ function handleScroll(nav) {
 window.addEventListener("scroll", () => {
   if (nav.classList.contains("transparent")) {
 
-    if (window.scrollY > 300) {
+    if (window.scrollY > 10) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");

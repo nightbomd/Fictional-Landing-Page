@@ -79,9 +79,12 @@ body {
 
 .carousel-item img {
     width: 50%;
-    height: 500px;
+    height: 75vh;
     object-fit: cover;
    
+}
+.shape {
+  opacity: 0.1 !important;
 }
 
 .color-green {
@@ -343,4 +346,9 @@ hr {
 .observe.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+.page-img {
+  height: 56vh;
+  width: auto;
+  border-radius: 1rem;
 }

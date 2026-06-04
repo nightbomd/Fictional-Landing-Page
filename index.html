@@ -53,8 +53,7 @@
             </div>
         </nav>
 
-        <div id="carouselExampleIndicators" class="carousel slide shadow-lg clear " data-bs-ride="carousel"
-            >
+        <div id="carouselExampleIndicators" class=" carousel slide shadow-lg clear  " data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -106,42 +105,70 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div class="bg-beige p-5">
-            <div class="text-center d-flex justify-content-center align-items-center ">
-                <div>
-                    <img src="./Client Files/Client Files/Logos/logo-barn-laurel-mark.png" class="clear observe" data-animation="scale" alt="Logo">
+        <div class="bg-beige p-5" style="position:relative; overflow:hidden;">
+
+            <!-- circle top right -->
+            <svg  style="position:absolute; top:-80px; right:-80px; opacity:0.1; pointer-events:none;" width="400"
+                height="400" viewBox="0 0 400 400">
+                <circle cx="200" cy="200" r="200" fill="#4A7C3F" />
+            </svg>
+
+            <!-- shape behind first image (left side) -->
+            <svg  style="position:absolute; top:900px; left:-80px; opacity:0.1; pointer-events:none;" width="250"
+                height="250" viewBox="0 0 250 250">
+                <rect width="250" height="250" fill="#4A7C3F" transform="rotate(15 125 125)" />
+            </svg>
+
+            <!-- shape behind second image (right side) -->
+            <svg  style="position:absolute; top:500px; left: 720px; opacity:0.1; pointer-events:none;" width="400"
+                height="400" viewBox="0 0 400 400">
+                <circle cx="200" cy="200" r="200" fill="#48BC9F" />
+            </svg>
+
+            <div class="row text-center d-flex justify-content-center align-items-center mb-5 mt-5 g-4">
+                <div class="col-6">
+                    <img src="./Client Files/Client Files/Placeholder Images/photo-apple-cider-donuts-fall-table.png"
+                        class="clear observe page-img shadow" data-animation="scale" alt="Logo">
                 </div>
-                <div class="clear observe" data-animation="fadeUp">
-                    <h2 class="subheading fs-1 fw-bold">Over View</h2>
+                <div class="col-6 clear observe p-5" data-animation="fadeUp">
+                    <h2 class="subheading text-start fs-1 fw-bold">Over View</h2>
                     <hr>
-                    <p class="w-75 m-auto">Welcome to our farm! We offer a variety of activities and products for the whole family to enjoy.
-                        From our famous pumpkin patch to our delicious farm-to-table dinners, there's something for
+                    <p class="fs-5 text-start">Welcome to our farm! We offer a variety of activities and products for
+                        the
+                        whole family to enjoy. From our famous pumpkin patch to our delicious farm-to-table dinners,
+                        there's something for
                         everyone.</p>
                 </div>
             </div>
 
-            <div class="text-center d-flex justify-content-center align-items-center gap-5 mb-5">
-                <div class=" clear observe" data-animation="fadeUp">
-                    <h2 class="subheading fs-1 fw-bold">A range of products</h2>
+            <div class="row text-center d-flex justify-content-center align-items-center mb-5 g-4">
+                <div class="col-6 clear observe p-5" data-animation="fadeUp">
+                    <h2 class="subheading text-start fs-1 fw-bold">A Range of Products</h2>
                     <hr>
-                    <p class="w-75">Products include fresh fruits, vegetables, and homemade goods. All made from the farm!</p>
+                    <p class="text-start fs-5">Products include fresh fruits, vegetables, and homemade goods. All made
+                        from
+                        the farm!</p>
                 </div>
-                <div>
-                    <img src="./Svg/basket.png" class="p-5 clear observe" data-animation="scale" alt="Logo">
+                <div class="col-6">
+                    <img src="./Client Files/Client Files/Placeholder Images/photo-farm-to-table-dinner-string-lights-barn.png"
+                        class="clear observe page-img shadow" data-animation="scale" alt="Logo">
                 </div>
             </div>
 
-            <div class="text-center d-flex justify-content-center align-items-center gap-5 mb-5">
-                <div>
-                    <img src="./Svg/picnic.png" class="p-5 clear observe" data-animation="scale" alt="Logo">
+            <div class="row text-center d-flex justify-content-center align-items-center mb-5 g-4">
+                <div class="col-6">
+                    <img src="./Client Files/Client Files/Placeholder Images/photo-hayride-tractor-gravel-road-barn.png"
+                        class="clear observe page-img shadow" data-animation="scale" alt="Logo">
                 </div>
-                <div class="clear observe" data-animation="fadeUp">
-                    <h2 class="subheading fs-1 fw-bold">Experience and Activites</h2>
+                <div class="col-6 clear observe p-5" data-animation="fadeUp">
+                    <h2 class="subheading text-start fs-1 fw-bold">Experience and Activities</h2>
                     <hr>
-                    <p>//overview of experience</p>
+                    <p class="fs-5 text-start">//overview of experience</p>
                 </div>
             </div>
+
         </div>
+
     </header>
     <main>
         <h2 class="subheading text-center color-green fw-bold my-5 p-5 fs-1 clear observe" data-animation="fadeUp">
@@ -350,7 +377,8 @@
 
             <div class="row justify-content-center align-items-center mb-5 wrapper p-5">
                 <section id="open-hours" class="col-12 col-md-5 p-5 clear observe" data-animation="fadeUp">
-                    <h2 class="text-center subheading fw-bold fs-1 clear observe mb-5" data-animation="fadeUp">Open Hours</h2>
+                    <h2 class="text-center subheading fw-bold fs-1 clear observe mb-5" data-animation="fadeUp">Open
+                        Hours</h2>
                     <table class=" col-12">
                         <thead class="bg-green">
                             <tr>
