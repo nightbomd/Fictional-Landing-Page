@@ -11,9 +11,10 @@ document.addEventListener("mousemove", (e) => {
 function animate() {
   x += (targetX - x) * 0.12;
   y += (targetY - y) * 0.08;
-
+ if (sunflower) {
   sunflower.style.left = x + "px";
   sunflower.style.top = y + "px";
+ }
 
   requestAnimationFrame(animate);
 }
@@ -69,6 +70,7 @@ const animations = {
 };
 
 const observer = new IntersectionObserver((entries) => {
+  
   entries.forEach((entry) => {
     const el = entry.target;
 
@@ -98,8 +100,7 @@ window.addEventListener("load", () => {
 
     const originalWidth = track.scrollWidth / 2.2;
     track.style.setProperty("--scroll-distance", `-${originalWidth}px`);
-  }
-
+    
   track.addEventListener("mouseover", () => {
     track.style.animationPlayState = "paused";
   });
@@ -107,6 +108,8 @@ window.addEventListener("load", () => {
   track.addEventListener("mouseout", () => {
     track.style.animationPlayState = "running";
   });
+  }
+
 
 
 });
@@ -149,6 +152,9 @@ cards.forEach((card) => {
   });
 });
 
+const cfContainer = document.getElementById("activities-section");
+
+if (cfContainer) {  
 document.getElementById("cf-prev").addEventListener("click", () => {
   current = mod(current - 1, total); update();
 });
@@ -156,7 +162,7 @@ document.getElementById("cf-prev").addEventListener("click", () => {
 document.getElementById("cf-next").addEventListener("click", () => {
   current = mod(current + 1, total); update();
 });
-
+}
 update();
 
 

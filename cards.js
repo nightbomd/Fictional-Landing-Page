@@ -62,18 +62,19 @@ const productContainers = [
 function createProductCard(product, index) {
     const container = document.createElement('div');
     container.className =
-        'product-container d-flex m-auto my-5 shadow  align-items-center text-center  rounded-5 p-5 justify-content-center gap-5';
-    container.dataset.animation = 'fadeUp';
+        'product-container d-flex m-auto my-5 shadow  align-items-center text-center   p-5 justify-content-center gap-5 observe';
+    container.dataset.animation = 'scale';
 
     if (product.background) {
         container.style.backgroundColor = product.background;
     }
 
     const img = document.createElement('img');
-    img.className = 'product-img rounded-circle shadow';
+    img.className = 'product-img rounded-circle shadow observe';
     img.id = `${product.id}-img`;
     img.src = product.image;
     img.alt = product.name;
+    img.dataset.animation = 'scale';
 
     const content = document.createElement('div');
     content.className = 'd-flex flex-column gap-2 p-5';
