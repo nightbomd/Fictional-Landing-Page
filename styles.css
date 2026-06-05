@@ -2,6 +2,9 @@
     max-width: 100px;
     height: auto;
 }
+html {
+  scroll-snap-type: y mandatory;
+}
 body{
   margin: 0;
 }

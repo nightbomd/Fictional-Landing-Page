@@ -1,16 +1,18 @@
 
 const sunflower = document.getElementById("sunflower");
 let x = 0, y = 0;
-let targetX = 0, targetY = 0;
+let targetX = 0, targetYx = 0;
 
 document.addEventListener("mousemove", (e) => {
   targetX = e.clientX;
-  targetY = e.clientY;
+  targetYx = e.clientY;
 });
+  
+
 
 function animate() {
   x += (targetX - x) * 0.12;
-  y += (targetY - y) * 0.08;
+  y += (targetYx - y) * 0.08;
  if (sunflower) {
   sunflower.style.left = x + "px";
   sunflower.style.top = y + "px";
@@ -164,6 +166,7 @@ document.getElementById("cf-next").addEventListener("click", () => {
 });
 }
 update();
+
 
 
 
