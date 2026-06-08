@@ -6,6 +6,7 @@ overflow-x: hidden;
 margin: 0;
 padding: 0;
 scroll-snap-type: y mandatory;
+font-family: 'Playfair Display', Georgia, serif !important;
 }
 
 *,
@@ -460,6 +461,10 @@ a {
 .activity {
   background-color: white !important;
   border-radius: 1rem;
+}
+.bg-brown {
+  background: var(--color-earth);
+  color: white !important;
 }
 
 @media (max-width: 768px) {

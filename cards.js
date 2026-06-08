@@ -216,7 +216,7 @@ function displayActivities() {
             <div class="col">
                <div class="card activity h-100 shadow" style="--bs-card-bg: ${activity.background || '#4A3728'}; !important">
                     <img src="${activity.image}" class="card-img-top" alt="${activity.name}">
-                    <div class="card-body mb-5 p-3">
+                    <div class="card-body  p-3">
                         <div class="d-flex justify-content-between align-items-center mb-2 ">
                             <h5 class="card-title text-start fs-3 m-0 fw-bold">${activity.name}</h5>
                             <span class="text-muted p-2 rounded-5 text-white" style="background: rgb(244, 139, 58); color: white !important; font-size: 0.85rem;">
@@ -224,11 +224,13 @@ function displayActivities() {
                             </span>
                         </div>
                         <p class="text-start">${activity.description}</p>
+                        <br>
                         <div class="text-start mt-auto">
                             <a href="#" class="fs-5">View → </a>
                         </div>
                     </div>
                 </div>
+                
             </div>
         `;
     }).join('');

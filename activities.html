@@ -11,6 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -72,11 +76,40 @@
         </nav>
 
     </header>
-    <main class="container mb-5">
+    <div class=" bg-brown">
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="d-flex justify-content-center align-items-center gap-5 mb-5">
+            <img src="./Client Files/Client Files/Placeholder Images/photo-pumpkins-gourds-haybales-barn-door.png"
+                alt="Activities" style="height: 200px; width: 200px; border-radius: 50%; object-fit: cover;"
+                class="shadow">
+            <div>
+            <h1 class="fw-bold text-start  " style="font-size: 5rem">Activities</h1>
+            <p class=" fs-5 text-start">Explore our exciting activities for all seasons!</p>
+            <button class="btn btn-black w-100">Schedule a visit</button>
+            </div>
 
-        <h1 class="fw-bold text-center subheading p-5 mt-5">Activities</h1>
+        </div>
+        <div class="w-100 overflow-hidden mb-5" style="line-height: 0;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none"
+                style="margin: -2px; position: relative; display: block; width: 100%; height: 60px;">
+                <path d="M0,60 
+                     C100,20 100,100 200,60 
+                     S300,100 400,60 
+                     S500,100 600,60 
+                     S700,100 800,60 
+                     S900,100 1000,60 
+                     S1100,100 1200,60 
+                     L1200,120 L0,120 Z" fill="#fcf6e8">
+            </svg>
+        </div>
+    </div>
+    <main class="container mb-5">
+
         <div class="d-flex align-items-start gap-4">
 
             <!-- Filter Section -->
@@ -102,7 +135,7 @@
             </div>
 
         </div>
-       <div id="activities-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4"></div>
+        <div id="activities-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4"></div>
 
         </div>
     </main>
@@ -113,8 +146,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-        <script src="cards.js"></script>
-        <script src="index.js"></script>
+    <script src="cards.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
