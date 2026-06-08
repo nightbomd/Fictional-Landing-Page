@@ -39,14 +39,14 @@ handleScroll(navbar)
 animate();
 const animations = {
   fadeUp: {
-    duration: 800,
+    duration: 500,
     in: [
-      { opacity: 0, transform: "translateY(50px)" },
+      { opacity: 0, transform: "translateY(40px)" },
       { opacity: 1, transform: "translateY(0)" }
     ],
     out: [
       { opacity: 1, transform: "translateY(0)" },
-      { opacity: 0, transform: "translateY(50px)" }
+      { opacity: 0, transform: "translateY(40px)" }
     ]
   },
 
@@ -65,11 +65,12 @@ const animations = {
   expand: {
     duration: 500,
     in: [
-    { width: "80%", borderRadius: "16px", margin: "200px auto", padding: "48px" },
-    { width: "100%", borderRadius: "0px", margin: "0 auto", padding: "48px" }
-  ],
+      { width: "80%", borderRadius: "16px", margin: "200px auto", padding: "48px" },
+      { width: "100%", borderRadius: "0px", margin: "0 auto", padding: "48px" }
+    ],
   }
 };
+
 
 const observer = new IntersectionObserver((entries) => {
   
@@ -166,6 +167,7 @@ document.getElementById("cf-next").addEventListener("click", () => {
 });
 }
 update();
+
 
 
 

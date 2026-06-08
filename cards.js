@@ -57,56 +57,103 @@ const productContainers = [
     }
 ];
 
-const activites = [
+const activities = [
     {
         id: 'activity1',
-        name: 'Apple Picking',
-        description: 'Experience the joy of harvesting fresh apples in our picturesque orchards.',
-        image: './Client Files/Client Files/activityPhotos/activity-apple-picking.png',
+        name: 'Apple Cider Pressing',
+        description: 'Experience the joy of harvesting fresh apples and pressing delicious cider with the family.',
+        image: './Client Files/Client Files/Events/event-apple-cider-pressing-family.png',
         background: '#f1eee8',
         season: 'Fall',
     },
-     {
+    {
         id: 'activity2',
+        name: 'Baby Animals Petting Zoo',
+        description: 'Interact with and learn about our adorable baby goats and chicks arriving this spring.',
+        image: './Client Files/Client Files/Events/event-baby-animals-goats-chicks-spring.png',
+        background: '#f1eee8',
+        season: 'Spring',
+    },
+    {
+        id: 'activity3',
         name: 'Blueberry U-Pick',
-        description: 'Experience the joy of harvesting fresh blueberries in our picturesque orchards.',
-        image: './Client Files/Client Files/activityPhotos/activity-blueberry-u-pick.png',
+        description: 'Gather the family to harvest plump, juicy blueberries directly from our summer patches.',
+        image: './Client Files/Client Files/Events/event-blueberry-upick-family-summer.png',
         background: '#f1eee8',
         season: 'Summer',
     },
-     {
-        id: 'activity3',
-        name: 'Baby Animal Petting Zoo',
-        description: 'pet the adorable baby animals in our petting zoo, where you can interact with and learn about our furry friends.',
-        image: './Client Files/Client Files/activityPhotos/activity-baby-animal-petting-zoo.png',
-        background: '#f1eee8',
-        season: 'Fall',
-    },
-     {
+    {
         id: 'activity4',
-        name: 'Sunflower U-Pick',
-        description: 'Experience the joy of harvesting fresh sunflowers in our picturesque fields.',
-        image: './Client Files/Client Files/activityPhotos/activity-sunflower-u-pick.png',
+        name: 'Christmas Tree Farm',
+        description: 'Explore the fields to choose and cut your own perfect tree for the holiday season.',
+        image: './Client Files/Client Files/Events/event-christmas-tree-farm-choose-cut.png',
         background: '#f1eee8',
-        season: 'Fall',
+        season: 'Winter',
     },
-     {
+    {
         id: 'activity5',
-        name: 'Pumpkin Patch',
-        description: 'Experience the joy of harvesting fresh pumpkins in our picturesque fields.',
-        image: './Client Files/Client Files/activityPhotos/activity-pumpkin-patch.png',
+        name: 'Corn Maze Adventure',
+        description: 'Gather the whole family and see if you can navigate your way through our massive corn maze entrance.',
+        image: './Client Files/Client Files/Events/event-corn-maze-entrance-family.png',
         background: '#f1eee8',
         season: 'Fall',
     },
-     {
+    {
         id: 'activity6',
-        name: 'Christmas Tree Farm ',
-        description: 'omg santa bro',
-        image: './Client Files/Client Files/activityPhotos/activity-christmas-tree-farm.png',
+        name: 'Fall Harvest Festival',
+        description: 'Join the festival crowds for a celebration of local food, crafts, and classic autumn fun.',
+        image: './Client Files/Client Files/Events/event-fall-harvest-festival-crowds.png',
         background: '#f1eee8',
-        season: 'winter',
+        season: 'Fall',
     },
-
+    {
+        id: 'activity7',
+        name: 'Farm-to-Table Dinner',
+        description: 'Enjoy an open-air dining experience featuring fresh farm ingredients under beautiful string lights.',
+        image: './Client Files/Client Files/Events/event-farm-to-table-dinner-string-lights.png',
+        background: '#f1eee8',
+        season: 'Summer',
+    },
+    {
+        id: 'activity8',
+        name: 'Tractor Wagon Hayride',
+        description: 'Take a relaxing tractor-pulled wagon ride across the farm landscape during a beautiful sunset.',
+        image: './Client Files/Client Files/Events/event-hayride-tractor-wagon-sunset.png',
+        background: '#f1eee8',
+        season: 'Fall',
+    },
+    {
+        id: 'activity9',
+        name: 'Holiday Market',
+        description: 'Shop local artisan crafts and gifts inside our cozy, glowing winter barn.',
+        image: './Client Files/Client Files/Events/event-holiday-market-barn-lights-winter.png',
+        background: '#f1eee8',
+        season: 'Winter',
+    },
+    {
+        id: 'activity10',
+        name: 'Pumpkin Patch',
+        description: 'Take a wagon ride out to the field with family to pick out the perfect pumpkin.',
+        image: './Client Files/Client Files/Events/event-pumpkin-patch-father-son-wagon.png',
+        background: '#f1eee8',
+        season: 'Fall',
+    },
+    {
+        id: 'activity11',
+        name: 'Strawberry U-Pick',
+        description: 'Bring the kids along to fill baskets with sweet, sun-ripened strawberries.',
+        image: './Client Files/Client Files/Events/event-strawberry-upick-child-basket.png',
+        background: '#f1eee8',
+        season: 'Spring',
+    },
+    {
+        id: 'activity12',
+        name: 'Sunflower U-Pick',
+        description: 'Stroll through picturesque fields to harvest fresh sunflowers at sunset.',
+        image: './Client Files/Client Files/Events/event-sunflower-upick-family-sunset.png',
+        background: '#f1eee8',
+        season: 'Fall',
+    },
 ];
 
 function createProductCard(product, index) {
@@ -158,9 +205,45 @@ function createProductCard(product, index) {
 
     return container;
 }
+function displayActivities() { 
+    const mainContainer = document.getElementById("activities-grid"); 
+    
+    // Safety check: if the element doesn't exist, stop immediately
+    if (!mainContainer) return; 
+
+    const activitiesHTML = activities.map(activity => {
+        return `
+            <div class="col">
+               <div class="card activity h-100 shadow" style="--bs-card-bg: ${activity.background || '#4A3728'}; !important">
+                    <img src="${activity.image}" class="card-img-top" alt="${activity.name}">
+                    <div class="card-body mb-5 p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2 ">
+                            <h5 class="card-title text-start fs-3 m-0 fw-bold">${activity.name}</h5>
+                            <span class="text-muted p-2 rounded-5 text-white" style="background: rgb(244, 139, 58); color: white !important; font-size: 0.85rem;">
+                                ${activity.season}
+                            </span>
+                        </div>
+                        <p class="text-start">${activity.description}</p>
+                        <div class="text-start mt-auto">
+                            <a href="#" class="fs-5">View → </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    mainContainer.innerHTML = activitiesHTML;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    displayActivities();
+});
 
 const productsSection = document.getElementById('products-section');
 
-productContainers.forEach((product, index) => {
-    productsSection.appendChild(createProductCard(product, index));
-});
+if (productsSection) {
+    productContainers.forEach((product, index) => {
+        productsSection.appendChild(createProductCard(product, index));
+    });
+}
