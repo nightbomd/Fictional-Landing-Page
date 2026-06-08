@@ -55,14 +55,64 @@ const productContainers = [
         image: './Client Files/Client Files/productPhotos/product-strawberry-preserves-jar.png',
         background: '#ffb49d',
     }
+];
 
+const activites = [
+    {
+        id: 'activity1',
+        name: 'Apple Picking',
+        description: 'Experience the joy of harvesting fresh apples in our picturesque orchards.',
+        image: './Client Files/Client Files/activityPhotos/activity-apple-picking.png',
+        background: '#f1eee8',
+        season: 'Fall',
+    },
+     {
+        id: 'activity2',
+        name: 'Blueberry U-Pick',
+        description: 'Experience the joy of harvesting fresh blueberries in our picturesque orchards.',
+        image: './Client Files/Client Files/activityPhotos/activity-blueberry-u-pick.png',
+        background: '#f1eee8',
+        season: 'Summer',
+    },
+     {
+        id: 'activity3',
+        name: 'Baby Animal Petting Zoo',
+        description: 'pet the adorable baby animals in our petting zoo, where you can interact with and learn about our furry friends.',
+        image: './Client Files/Client Files/activityPhotos/activity-baby-animal-petting-zoo.png',
+        background: '#f1eee8',
+        season: 'Fall',
+    },
+     {
+        id: 'activity4',
+        name: 'Sunflower U-Pick',
+        description: 'Experience the joy of harvesting fresh sunflowers in our picturesque fields.',
+        image: './Client Files/Client Files/activityPhotos/activity-sunflower-u-pick.png',
+        background: '#f1eee8',
+        season: 'Fall',
+    },
+     {
+        id: 'activity5',
+        name: 'Pumpkin Patch',
+        description: 'Experience the joy of harvesting fresh pumpkins in our picturesque fields.',
+        image: './Client Files/Client Files/activityPhotos/activity-pumpkin-patch.png',
+        background: '#f1eee8',
+        season: 'Fall',
+    },
+     {
+        id: 'activity6',
+        name: 'Christmas Tree Farm ',
+        description: 'omg santa bro',
+        image: './Client Files/Client Files/activityPhotos/activity-christmas-tree-farm.png',
+        background: '#f1eee8',
+        season: 'winter',
+    },
 
 ];
 
 function createProductCard(product, index) {
     const container = document.createElement('div');
     container.className =
-        'product-container d-flex m-auto my-5 shadow  align-items-center text-center   p-5 justify-content-center gap-5 observe';
+        'product-container d-flex m-auto my-5 shadow align-items-center text-center p-5 justify-content-center gap-5 observe';
     container.dataset.animation = 'scale';
 
     if (product.background) {
@@ -106,11 +156,9 @@ function createProductCard(product, index) {
         container.append(img, content);
     }
 
-
     return container;
 }
 
-// Render all products
 const productsSection = document.getElementById('products-section');
 
 productContainers.forEach((product, index) => {

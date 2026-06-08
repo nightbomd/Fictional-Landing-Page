@@ -51,7 +51,7 @@ const animations = {
   },
 
   scale: {
-    duration: 800,
+    duration: 500,
     in: [
       { opacity: 0, transform: "scale(0)" },
       { opacity: 1, transform: "scale(1)" }
