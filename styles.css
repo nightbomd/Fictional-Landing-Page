@@ -491,7 +491,11 @@ a {
 .carosuel-drag:active {
     cursor: grabbing;
 }
-
+.btn-secondary {
+    background-color: #fafafa !important;
+    color: var(--color-forest) !important;
+    border: 2px solid var(--color-forest) !important;
+}
 #drag-carosuel-container:hover .drag-badge {
     transform: translate(-50%, -50%) scale(1);
 }
