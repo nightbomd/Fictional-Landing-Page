@@ -466,7 +466,31 @@ a {
   background: var(--color-earth);
   color: white !important;
 }
+.card.activity {
+    flex: 0 0 min(350px, 80vw) !important;
+}
+.carosuel-drag::-webkit-scrollbar { 
+    display: none;
+}
+.carosuel-drag {
+    overflow-x: auto;
+    overflow-y: hidden;
 
+    display: flex;
+    flex-wrap: nowrap;
+
+    gap: 1.5rem;
+    user-select: none;
+    cursor: grab;
+
+    scroll-behavior: auto;
+
+    -webkit-overflow-scrolling: touch; /* smooth mobile */
+}
+
+.carosuel-drag:active {
+    cursor: grabbing;
+}
 @media (max-width: 768px) {
 
 

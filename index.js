@@ -116,6 +116,7 @@ window.addEventListener("load", () => {
 
 
 });
+/*
 const cards = Array.from(document.querySelectorAll(".cf-card"));
 const dotsEl = document.getElementById("cf-dots");
 let current = 0;
@@ -167,7 +168,7 @@ document.getElementById("cf-next").addEventListener("click", () => {
 });
 }
 update();
-
+*/
 
 
 

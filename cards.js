@@ -6,21 +6,21 @@ const productContainers = [
         image: './Client Files/Client Files/productPhotos/product-blueberry-preserves-jar.png',
         background: '#E4CEEA',
     },
-     {
+    {
         id: 'product2',
         name: 'Apple Pie',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-apple-pie-bakery.png',
         background: '#FFEFD2',
     },
-     {
+    {
         id: 'product3',
         name: 'Apple Cider',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-fresh-apple-cider-jug.png',
         background: '#f0d7aa',
     },
-      {
+    {
         id: 'product4',
         name: 'Fresh Eggs',
         description: 'Discover our range of fresh, locally-sourced goods.',
@@ -48,7 +48,7 @@ const productContainers = [
         image: './Client Files/Client Files/productPhotos/product-sourdough-bread-loaf.png',
         background: '#fafae3',
     },
-     {
+    {
         id: 'product8',
         name: 'Sourdough Bread',
         description: 'Discover our range of fresh, locally-sourced goods.',
@@ -205,11 +205,11 @@ function createProductCard(product, index) {
 
     return container;
 }
-function displayActivities() { 
-    const mainContainer = document.getElementById("activities-grid"); 
-    
+function displayActivities(container) {
+
+
     // Safety check: if the element doesn't exist, stop immediately
-    if (!mainContainer) return; 
+    if (!container) return;
 
     const activitiesHTML = activities.map(activity => {
         return `
@@ -235,12 +235,97 @@ function displayActivities() {
         `;
     }).join('');
 
-    mainContainer.innerHTML = activitiesHTML;
-}
+    container.innerHTML = activitiesHTML;
 
+    if (container.id === "drag-carosuel-container") {
+        container.innerHTML = activitiesHTML + activitiesHTML;
+
+        const sensitivity = 0.75; // Lower = more friction. Higher = faster.
+        let isResetting = false;
+
+        requestAnimationFrame(() => {
+            container.scrollLeft = container.scrollWidth / 2;
+        });
+
+        // Infinite scroll logic
+        container.addEventListener("scroll", () => {
+            if (isResetting) return;
+            const half = container.scrollWidth / 2;
+
+            if (container.scrollLeft >= half * 1.5) {
+                isResetting = true;
+                container.scrollLeft -= half;
+                isResetting = false;
+            }
+            if (container.scrollLeft <= half * 0.5) {
+                isResetting = true;
+                container.scrollLeft += half;
+                isResetting = false;
+            }
+        });
+
+        container.querySelectorAll(".col").forEach(col => {
+            col.style.flex = "0 0 350px";
+        });
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        container.addEventListener("mousedown", (e) => {
+            isDown = true;
+            container.style.cursor = "grabbing";
+
+            // CRITICAL FIX 1: Prevent text/image selection ghosting
+            e.preventDefault();
+
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener("mouseup", () => {
+            isDown = false;
+            container.style.cursor = "grab";
+        });
+
+        container.addEventListener("mouseleave", () => {
+            isDown = false;
+            container.style.cursor = "grab";
+        });
+
+        container.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+
+            // CRITICAL FIX 2: Prevent browser default scrolling/dragging actions
+            e.preventDefault();
+
+            const x = e.pageX - container.offsetLeft;
+            const distance = x - startX;
+            const walk = distance * sensitivity;
+
+            container.scrollLeft = scrollLeft - walk;
+        });
+
+        // CRITICAL FIX 3: Disable HTML5 native dragging on the container
+        container.addEventListener("dragstart", (e) => {
+            e.preventDefault();
+        });
+
+        container.style.cursor = "grab";
+    }
+}
+const mainContainer = document.getElementById("activities-grid");
 document.addEventListener("DOMContentLoaded", () => {
-    displayActivities();
+    if (mainContainer) {
+        displayActivities(mainContainer);
+    }
 });
+
+const activityDragCarosuel = document.getElementById('drag-carosuel-container')
+
+if (activityDragCarosuel) {
+    displayActivities(activityDragCarosuel);
+}
 
 const productsSection = document.getElementById('products-section');
 
@@ -248,4 +333,4 @@ if (productsSection) {
     productContainers.forEach((product, index) => {
         productsSection.appendChild(createProductCard(product, index));
     });
-}
+};
