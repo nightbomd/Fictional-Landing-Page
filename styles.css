@@ -491,6 +491,11 @@ a {
 .carosuel-drag:active {
     cursor: grabbing;
 }
+
+#drag-carosuel-container:hover .drag-badge {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 @media (max-width: 768px) {
 
 

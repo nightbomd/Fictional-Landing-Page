@@ -240,6 +240,7 @@ function displayActivities(container) {
     if (container.id === "drag-carosuel-container") {
         container.innerHTML = activitiesHTML + activitiesHTML;
 
+        
         const sensitivity = 0.75; // Lower = more friction. Higher = faster.
         let isResetting = false;
 
