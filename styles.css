@@ -499,6 +499,42 @@ a {
 #drag-carosuel-container:hover .drag-badge {
     transform: translate(-50%, -50%) scale(1);
 }
+.bg-red {
+  background: var(--color-barn-red);
+  color: white !important;
+}
+.upcoming-section {
+    min-height: 500px;
+}
+
+.position-relative {
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+}
+
+.overlay-content {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    z-index: 2;
+
+    padding: 2rem;
+}
+.overlay-content p {
+    margin-bottom: 1rem;
+}
 
 @media (max-width: 768px) {
 
