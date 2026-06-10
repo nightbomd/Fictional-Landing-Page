@@ -65,7 +65,7 @@ const animations = {
   expand: {
     duration: 500,
     in: [
-      { width: "80%", borderRadius: "16px", margin: "200px auto", padding: "48px" },
+      { width: "75%", borderRadius: "16px", margin: "200px auto", padding: "48px" },
       { width: "100%", borderRadius: "0px", margin: "0 auto", padding: "48px" }
     ],
   }

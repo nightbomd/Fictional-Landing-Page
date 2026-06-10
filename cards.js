@@ -63,7 +63,8 @@ const activities = [
         name: 'Apple Cider Pressing',
         description: 'Experience the joy of harvesting fresh apples and pressing delicious cider with the family.',
         image: './Client Files/Client Files/Events/event-apple-cider-pressing-family.png',
-        background: '#f1eee8',
+        background: '#4A3728',
+        color: '#f1eee8',
         season: 'Fall',
     },
     {
@@ -71,7 +72,8 @@ const activities = [
         name: 'Baby Animals Petting Zoo',
         description: 'Interact with and learn about our adorable baby goats and chicks arriving this spring.',
         image: './Client Files/Client Files/Events/event-baby-animals-goats-chicks-spring.png',
-        background: '#f1eee8',
+        background: '#8B2500',
+        color: "white",
         season: 'Spring',
     },
     {
@@ -79,7 +81,8 @@ const activities = [
         name: 'Blueberry U-Pick',
         description: 'Gather the family to harvest plump, juicy blueberries directly from our summer patches.',
         image: './Client Files/Client Files/Events/event-blueberry-upick-family-summer.png',
-        background: '#f1eee8',
+        background: '#D4A017',
+        color: "white",
         season: 'Summer',
     },
     {
@@ -87,7 +90,8 @@ const activities = [
         name: 'Christmas Tree Farm',
         description: 'Explore the fields to choose and cut your own perfect tree for the holiday season.',
         image: './Client Files/Client Files/Events/event-christmas-tree-farm-choose-cut.png',
-        background: '#f1eee8',
+        background: '#154368',
+        color: "white",
         season: 'Winter',
     },
     {
@@ -95,7 +99,8 @@ const activities = [
         name: 'Corn Maze Adventure',
         description: 'Gather the whole family and see if you can navigate your way through our massive corn maze entrance.',
         image: './Client Files/Client Files/Events/event-corn-maze-entrance-family.png',
-        background: '#f1eee8',
+        background: '#4A3728',
+        color: '#f1eee8',
         season: 'Fall',
     },
     {
@@ -103,7 +108,8 @@ const activities = [
         name: 'Fall Harvest Festival',
         description: 'Join the festival crowds for a celebration of local food, crafts, and classic autumn fun.',
         image: './Client Files/Client Files/Events/event-fall-harvest-festival-crowds.png',
-        background: '#f1eee8',
+        background: '#4A3728',
+        color: '#f1eee8',
         season: 'Fall',
     },
     {
@@ -111,7 +117,8 @@ const activities = [
         name: 'Farm-to-Table Dinner',
         description: 'Enjoy an open-air dining experience featuring fresh farm ingredients under beautiful string lights.',
         image: './Client Files/Client Files/Events/event-farm-to-table-dinner-string-lights.png',
-        background: '#f1eee8',
+        background: '#D4A017',
+        color: "white",
         season: 'Summer',
     },
     {
@@ -119,7 +126,9 @@ const activities = [
         name: 'Tractor Wagon Hayride',
         description: 'Take a relaxing tractor-pulled wagon ride across the farm landscape during a beautiful sunset.',
         image: './Client Files/Client Files/Events/event-hayride-tractor-wagon-sunset.png',
-        background: '#f1eee8',
+        background: '#4A3728',
+        color: '#f1eee8',   
+
         season: 'Fall',
     },
     {
@@ -127,7 +136,8 @@ const activities = [
         name: 'Holiday Market',
         description: 'Shop local artisan crafts and gifts inside our cozy, glowing winter barn.',
         image: './Client Files/Client Files/Events/event-holiday-market-barn-lights-winter.png',
-        background: '#f1eee8',
+        background: '#154368',
+        color: "white",
         season: 'Winter',
     },
     {
@@ -135,7 +145,8 @@ const activities = [
         name: 'Pumpkin Patch',
         description: 'Take a wagon ride out to the field with family to pick out the perfect pumpkin.',
         image: './Client Files/Client Files/Events/event-pumpkin-patch-father-son-wagon.png',
-        background: '#f1eee8',
+        background: '#4A3728',
+        color: '#f1eee8',
         season: 'Fall',
     },
     {
@@ -143,7 +154,8 @@ const activities = [
         name: 'Strawberry U-Pick',
         description: 'Bring the kids along to fill baskets with sweet, sun-ripened strawberries.',
         image: './Client Files/Client Files/Events/event-strawberry-upick-child-basket.png',
-        background: '#f1eee8',
+        background: '#8B2500',
+        color: "white",
         season: 'Spring',
     },
     {
@@ -151,7 +163,8 @@ const activities = [
         name: 'Sunflower U-Pick',
         description: 'Stroll through picturesque fields to harvest fresh sunflowers at sunset.',
         image: './Client Files/Client Files/Events/event-sunflower-upick-family-sunset.png',
-        background: '#f1eee8',
+        background: '#4A3728',
+        color: '#f1eee8',
         season: 'Fall',
     },
 ];
@@ -205,16 +218,16 @@ function createProductCard(product, index) {
 
     return container;
 }
-function displayActivities(container) {
+function displayActivities(container, array) {
 
 
     // Safety check: if the element doesn't exist, stop immediately
     if (!container) return;
 
-    const activitiesHTML = activities.map(activity => {
+    const activitiesHTML = array.map(activity => {
         return `
             <div class="col">
-               <div class="card activity h-100 shadow" style="--bs-card-bg: ${activity.background || '#4A3728'}; !important">
+               <div class="card activity h-100 shadow"  style="background-color: ${activity.background || '#e47928'} !important; color: ${activity.color || '#f1eee8'} !important; border: none; ">
                     <img src="${activity.image}" class="card-img-top" alt="${activity.name}">
                     <div class="card-body  p-3">
                         <div class="d-flex justify-content-between align-items-center mb-2 ">
@@ -226,7 +239,7 @@ function displayActivities(container) {
                         <p class="text-start">${activity.description}</p>
                         <br>
                         <div class="text-start mt-auto">
-                            <a href="#" class="fs-5">View → </a>
+                            <a href="#" style="color: ${activity.color || 'black'} !important;" class="fs-5">View → </a>
                         </div>
                     </div>
                 </div>
@@ -318,14 +331,14 @@ function displayActivities(container) {
 const mainContainer = document.getElementById("activities-grid");
 document.addEventListener("DOMContentLoaded", () => {
     if (mainContainer) {
-        displayActivities(mainContainer);
+        displayActivities(mainContainer, activities);
     }
 });
 
 const activityDragCarosuel = document.getElementById('drag-carosuel-container')
 
 if (activityDragCarosuel) {
-    displayActivities(activityDragCarosuel);
+    displayActivities(activityDragCarosuel, activities);
 }
 
 const productsSection = document.getElementById('products-section');
@@ -335,3 +348,20 @@ if (productsSection) {
         productsSection.appendChild(createProductCard(product, index));
     });
 };
+
+document.getElementById("season-select").addEventListener("change", (e) => {
+    const selectedSeason = e.target.value.toLowerCase();
+    const filteredActivities = activities.filter(activity => activity.season.toLowerCase() === selectedSeason);
+
+    console.log(filteredActivities);
+    console.log(selectedSeason);
+    displayActivities(mainContainer, filteredActivities);
+});
+document.getElementById("search-input").addEventListener("input", (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filteredActivities = activities.filter(activity => activity.name.toLowerCase().includes(searchTerm));
+
+    console.log(filteredActivities);
+    console.log(searchTerm);
+    displayActivities(mainContainer, filteredActivities);
+});
