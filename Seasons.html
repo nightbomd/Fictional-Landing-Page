@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Season Layout</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+    }
+
+    .container {
+        width: 200px;
+        margin: 0 auto;
+        background-color: #d3d3d3;
+    }
+
+    .navbar {
+        background-color: #efe3c6;
+        text-align: center;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        background-color: #7b6262;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .circle::before,
+    .circle::after {
+        content: "";
+        position: absolute;
+        background: white;
+    }
+
+    .circle::before {
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .circle::after {
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hero-text {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .season {
+        padding: 10px;
+    }
+
+    .season h3 {
+        font-size: 12px;
+        margin-bottom: 5px;
+        font-weight: normal;
+    }
+
+    .season-content {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 75px;
+        height: 40px;
+        border: 2px solid black;
+        position: relative;
+    }
+
+    .image-box::before,
+    .image-box::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: black;
+        top: 50%;
+        left: 0;
+        transform-origin: center;
+    }
+
+    .image-box::before {
+        transform: rotate(28deg);
+    }
+
+    .image-box::after {
+        transform: rotate(-28deg);
+    }
+
+    .season-text {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    footer {
+        background-color: #134d25;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="navbar">
+        Navbar Lipsum
+    </div>
+
+    <div class="hero">
+        <div class="circle"></div>
+
+        <div class="hero-text">
+            text text<br>
+            text text<br>
+            text text<br>
+            text text<br>
+            text text
+        </div>
+    </div>
+
+    <div class="season">
+        <h3>Winter Lipsum</h3>
+        <div class="season-content">
+            <div class="image-box"></div>
+            <div class="season-text">
+                text text text text<br>
+                text text text text<br>
+                text text text text
+            </div>
+        </div>
+    </div>
+
+    <div class="season">
+        <h3>Fall Lipsum</h3>
+        <div class="season-content">
+            <div class="image-box"></div>
+            <div class="season-text">
+                text text text text<br>
+                text text text text<br>
+                text text text text
+            </div>
+        </div>
+    </div>
+
+    <div class="season">
+        <h3>Spring Lipsum</h3>
+        <div class="season-content">
+            <div class="image-box"></div>
+            <div class="season-text">
+                text text text text<br>
+                text text text text<br>
+                text text text text
+            </div>
+        </div>
+    </div>
+
+    <div class="season">
+        <h3>Summer Lipsum</h3>
+        <div class="season-content">
+            <div class="image-box"></div>
+            <div class="season-text">
+                text text text text<br>
+                text text text text<br>
+                text text text text
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        footer
+    </footer>
+
+</div>
+
+</body>
+</html>
