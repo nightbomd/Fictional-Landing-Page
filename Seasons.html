@@ -1,209 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Season Layout</title>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        background-color: white;
-    }
-
-    .container {
-        width: 200px;
-        margin: 0 auto;
-        background-color: #d3d3d3;
-    }
-
-    .navbar {
-        background-color: #efe3c6;
-        text-align: center;
-        padding: 8px;
-        font-size: 12px;
-    }
-
-    .hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .circle {
-        width: 70px;
-        height: 70px;
-        background-color: #7b6262;
-        border-radius: 50%;
-        position: relative;
-    }
-
-    .circle::before,
-    .circle::after {
-        content: "";
-        position: absolute;
-        background: white;
-    }
-
-    .circle::before {
-        width: 2px;
-        height: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .circle::after {
-        height: 2px;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .hero-text {
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    .season {
-        padding: 10px;
-    }
-
-    .season h3 {
-        font-size: 12px;
-        margin-bottom: 5px;
-        font-weight: normal;
-    }
-
-    .season-content {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .image-box {
-        width: 75px;
-        height: 40px;
-        border: 2px solid black;
-        position: relative;
-    }
-
-    .image-box::before,
-    .image-box::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: black;
-        top: 50%;
-        left: 0;
-        transform-origin: center;
-    }
-
-    .image-box::before {
-        transform: rotate(28deg);
-    }
-
-    .image-box::after {
-        transform: rotate(-28deg);
-    }
-
-    .season-text {
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    footer {
-        background-color: #134d25;
-        color: black;
-        text-align: center;
-        padding: 12px;
-        margin-top: 10px;
-        font-size: 12px;
-    }
-</style>
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg d-flex align-items-center transparent">
+            <div class="container-fluid">
 
-<div class="container">
+                <img class="logo-img img-fluid" src="./Client Files/Client Files/Logos/logo-main-full-color.png"
+                    alt="Logo">
 
-    <div class="navbar">
-        Navbar Lipsum
-    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
 
-    <div class="hero">
-        <div class="circle"></div>
+                </button>
 
-        <div class="hero-text">
-            text text<br>
-            text text<br>
-            text text<br>
-            text text<br>
-            text text
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="activities.html">
+                                Activities
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                Products
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Seasons.html">
+                                Seasonal Highlights
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container my-5">
+            <h1 class="mb-4">Seasonal Highlights</h1>
+            <p>Discover the best activities, products, and events for each season. Whether you're looking for summer
+                fun, cozy fall experiences, winter wonderlands, or springtime adventures, we've got you covered with our
+                seasonal highlights.</p>
         </div>
-    </div>
+        <div class="pie-gallery mx-auto shadow">
+            <div class="quadrant">
+                <img src="./Client Files/Client Files/Placeholder Images/photo-wreaths-christmas-trees-winter-market.png"
+                    class="w-100 h-100" alt="">
+            </div>
 
-    <div class="season">
-        <h3>Winter Lipsum</h3>
-        <div class="season-content">
-            <div class="image-box"></div>
-            <div class="season-text">
-                text text text text<br>
-                text text text text<br>
-                text text text text
+            <div class="quadrant">
+                <img src="./Client Files/Client Files/Placeholder Images/photo-farm-to-table-dinner-string-lights-barn.png"
+                    class="w-100 h-100" alt="">
+            </div>
+
+            <div class="quadrant">
+                <img src="./Client Files/Client Files/Placeholder Images/photo-pumpkins-gourds-haybales-barn-door.png"
+                    class="w-100 h-100" alt="">
+            </div>
+
+            <div class="quadrant">
+                <img src="./Client Files/Client Files/Placeholder Images/photo-fresh-vegetables-basket-outdoor.png"
+                    class="w-100 h-100" alt="">
             </div>
         </div>
-    </div>
-
-    <div class="season">
-        <h3>Fall Lipsum</h3>
-        <div class="season-content">
-            <div class="image-box"></div>
-            <div class="season-text">
-                text text text text<br>
-                text text text text<br>
-                text text text text
+        <div class="container">
+            <div class="row g-4 my-4">
+                <div class="col-12">
+                    <h2>Winter</h2>
+                    <p>Experience the magic of winter with festive markets, cozy firesides, and snowy adventures. From
+                        ice skating to holiday shopping, winter offers a unique blend of relaxation and excitement.</p>
+                    <div class="d-flex align-items-center">
+                        <img src="./Client Files/Client Files/Placeholder Images/photo-wreaths-christmas-trees-winter-market.png" alt="Winter Image" class="img-fluid rounded shadow me-3" style="max-width: 15vw;">
+                        <img src="./Client Files/Client Files/Events/event-christmas-tree-farm-choose-cut.png" alt="Winter Activities Image" class="img-fluid me-3 rounded shadow" style="max-width: 15vw">
+                        <img src="./Client Files/Client Files/Events/event-holiday-market-barn-lights-winter.png" alt="Winter Activities Image" class="img-fluid rounded shadow" style="max-width: 15vw">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h2>Spring</h2>
+                    <p>Embrace the renewal of spring with blooming gardens, outdoor festivals, and fresh farm-to-table
+                        dining. It's the perfect time to explore nature, try new recipes, and celebrate the season of
+                        growth.</p>
+                </div>
+                <div class="col-12">
+                    <h2>Summer</h2>
+                    <p>Make the most of summer with beach days, outdoor concerts, and vibrant festivals. Whether you're
+                        looking for relaxation or adventure, summer offers endless opportunities for fun in the sun.</p>
+                </div>
+                <div class="col-12">
+                    <h2>Fall</h2>
+                    <p>Enjoy the beauty of fall with colorful foliage, pumpkin patches, and harvest festivals. It's the
+                        perfect season for cozy sweaters, warm drinks, and outdoor activities that celebrate the bounty
+                        of
+                        nature.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="season">
-        <h3>Spring Lipsum</h3>
-        <div class="season-content">
-            <div class="image-box"></div>
-            <div class="season-text">
-                text text text text<br>
-                text text text text<br>
-                text text text text
-            </div>
-        </div>
-    </div>
-
-    <div class="season">
-        <h3>Summer Lipsum</h3>
-        <div class="season-content">
-            <div class="image-box"></div>
-            <div class="season-text">
-                text text text text<br>
-                text text text text<br>
-                text text text text
-            </div>
-        </div>
-    </div>
-
+    </main>
     <footer>
-        footer
+        <!-- place footer here -->
     </footer>
-
-</div>
-
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

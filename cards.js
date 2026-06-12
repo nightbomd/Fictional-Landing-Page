@@ -127,7 +127,7 @@ const activities = [
         description: 'Take a relaxing tractor-pulled wagon ride across the farm landscape during a beautiful sunset.',
         image: './Client Files/Client Files/Events/event-hayride-tractor-wagon-sunset.png',
         background: '#4A3728',
-        color: '#f1eee8',   
+        color: '#f1eee8',
 
         season: 'Fall',
     },
@@ -253,7 +253,7 @@ function displayActivities(container, array) {
     if (container.id === "drag-carosuel-container") {
         container.innerHTML = activitiesHTML + activitiesHTML;
 
-        
+
         const sensitivity = 0.75; // Lower = more friction. Higher = faster.
         let isResetting = false;
 
@@ -351,7 +351,14 @@ if (productsSection) {
 
 document.getElementById("season-select").addEventListener("change", (e) => {
     const selectedSeason = e.target.value.toLowerCase();
-    const filteredActivities = activities.filter(activity => activity.season.toLowerCase() === selectedSeason);
+    const filteredActivities =
+        selectedSeason === "season"
+            ? activities
+            : activities.filter(
+                activity => activity.season.toLowerCase() === selectedSeason
+            );
+
+    displayActivities(mainContainer, filteredActivities);
 
     console.log(filteredActivities);
     console.log(selectedSeason);
