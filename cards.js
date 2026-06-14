@@ -171,50 +171,68 @@ const activities = [
 
 function createProductCard(product, index) {
     const container = document.createElement('div');
+    // Changed 'd-flex' to 'row g-4 align-items-center' to turn the container into a responsive grid row
     container.className =
-        'product-container d-flex m-auto my-5 shadow align-items-center text-center p-5 justify-content-center gap-5 ';
+        'product-container row g-4 m-auto my-5 shadow align-items-center text-center p-4 p-md-5 justify-content-center';
     container.dataset.animation = 'scale';
 
     if (product.background) {
         container.style.backgroundColor = product.background;
     }
 
+    // 1. Image Wrapper to control grid footprint
+    const imgWrapper = document.createElement('div');
+    // Full width (12 columns) on mobile, half width (6 columns) on medium screens and up
+    imgWrapper.className = 'col-12 col-md-6 d-flex justify-content-center';
+
     const img = document.createElement('img');
-    img.className = 'product-img rounded-circle shadow observe';
+    // Swapped 'product-img' logic to clean responsive image classes
+    img.className = 'img-fluid rounded-circle shadow observe w-75';
     img.id = `${product.id}-img`;
     img.src = product.image;
     img.alt = product.name;
     img.dataset.animation = 'scale';
+    img.style.aspectRatio = '1 / 1';
+    img.style.objectFit = 'cover';
+    
+    imgWrapper.append(img);
 
+    // 2. Content Wrapper
     const content = document.createElement('div');
-    content.className = 'd-flex flex-column gap-2 p-5';
+    // Full width (12 columns) on mobile, half width (6 columns) on medium screens and up
+    content.className = 'col-12 col-md-6 d-flex flex-column gap-2 text-md-start p-3 p-md-4';
 
     const heading = document.createElement('h2');
-    heading.className = 'subheading fw-bold fs-1 text-start';
+    // Changed text-start to display-6 for cleaner responsive title scaling
+    heading.className = 'subheading fw-bold display-6 text-center text-md-start';
     heading.textContent = product.name;
 
     const description = document.createElement('p');
+    description.className = 'text-center text-md-start fs-5 text-muted';
     description.textContent = product.description;
 
     const buttonGroup = document.createElement('div');
-    buttonGroup.className = 'd-flex gap-3';
+    buttonGroup.className = 'd-flex gap-3 justify-content-center justify-content-md-start mt-2';
 
     const detailsBtn = document.createElement('button');
-    detailsBtn.className = 'btn btn-primary col-6';
+    detailsBtn.className = 'btn btn-primary px-4 py-2 fw-semibold';
     detailsBtn.textContent = 'View Details';
 
     const cartBtn = document.createElement('button');
-    cartBtn.className = 'btn btn-secondary col-6';
+    cartBtn.className = 'btn btn-secondary px-4 py-2 fw-semibold';
     cartBtn.textContent = 'Add to Cart';
 
     buttonGroup.append(detailsBtn, cartBtn);
     content.append(heading, description, buttonGroup);
 
+    // 3. Alternating Layout Injection Logic
+    // If it's an odd index, use the 'order-md-2' style paradigm to naturally handle layout flipping on desktop while preserving straight standard column stacking order on mobile phones.
     if (index % 2 === 1) {
-        container.append(content, img);
-    } else {
-        container.append(img, content);
+        imgWrapper.classList.add('order-md-2');
+        content.classList.add('order-md-1');
     }
+
+    container.append(imgWrapper, content);
 
     return container;
 }

@@ -10,8 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <img src="download.png" id="sunflower" alt="sunflower">
 
     <header>
-            <nav id="navbar" class="navbar navbar-expand-lg d-flex align-items-center transparent">
+        <nav id="navbar" class="navbar navbar-expand-lg d-flex align-items-center ">
             <div class="container-fluid">
 
                 <img class="logo-img img-fluid" src="./Client Files/Client Files/Logos/logo-main-full-color.png"
@@ -66,7 +67,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="Seasons.html">
                                 Seasonal Highlights
                             </a>
                         </li>
@@ -78,68 +79,62 @@
 
     <main>
 
-        <section class="contact-section container observe" data-animation="fadeUp">
+        <div class="container-fluid g-0 position-relative  mb-5" style="min-height: 70vh; 
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                            url('./Client Files/Client Files/Staff  Family Portrait Style Graphics/family-bill-margaret-founders-fence.png'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;">
+            <div class="d-flex flex-column align-items-center justify-content-center  text-start h-100">
 
-            <div class="text-center">
-
-                <img src="./Client Files/Client Files/Logos/logo-icon-sun-creek.png"
-                    class="contact-logo mb-3"
-                    alt="Farm Logo">
-
-                <h1 class="subheading fw-bold contact-title">
+                <h1 class="subheading p-5 text-light text-start fw-bold contact-title">
                     Contact Us
                 </h1>
-
+                <p class="lead opacity-90 mb-4 w-50 text-light">
+                            Have questions about our seasonal activities, farm market products, or booking a private group visit? Drop us a message below, and our family team will get back to you as soon as possible!
+                        </p>
             </div>
-
-            <form class="contact-form">
+        </div>
+        <section class="contact-section  p-5 ">
+            <form class="contact-form col-sm-12 col-md-8 col-lg-8 m-auto">
 
                 <div class="row">
 
                     <div class="col-md-6 mb-4">
-                        <label class="form-label">
-                            First Name*
+                        <label class="form-label text-dark fw-semibold">
+                            First Name<span class="text-success">*</span>
                         </label>
 
-                        <input type="text"
-                            class="form-control contact-input"
-                            required>
+                        <input type="text" class="form-control contact-input border-dark text-dark" required>
                     </div>
 
                     <div class="col-md-6 mb-4">
-                        <label class="form-label">
-                            Last Name*
+                        <label class="form-label text-dark fw-semibold">
+                            Last Name<span class="text-success">*</span>
                         </label>
 
-                        <input type="text"
-                            class="form-control contact-input"
-                            required>
+                        <input type="text" class="form-control contact-input border-dark text-dark" required>
                     </div>
 
                 </div>
 
                 <div class="mb-4">
-                    <label class="form-label">
-                        Email*
+                    <label class="form-label text-dark fw-semibold">
+                        Email<span class="text-success">*</span>
                     </label>
 
-                    <input type="email"
-                        class="form-control contact-input"
-                        required>
+                    <input type="email" class="form-control contact-input border-dark text-dark" required>
                 </div>
 
                 <div class="mb-4">
-                    <label class="form-label">
+                    <label class="form-label text-dark fw-semibold">
                         Message
                     </label>
 
-                    <textarea
-                        class="form-control contact-input"
-                        rows="7"></textarea>
+                    <textarea class="form-control contact-input border-dark text-dark" rows="7"></textarea>
                 </div>
 
-                <button type="submit"
-                    class="btn btn-primary w-100 py-3">
+                <button type="submit" class="btn btn-primary w-100 py-3 fw-bold border-dark">
                     Submit
                 </button>
 
@@ -150,7 +145,7 @@
     </main>
 
     <footer>
-        <div class="bg-green m-0">
+        <div class="bg-dark m-0">
             <p class="text-center text-white py-3 mb-0">
                 © 2023 Hollow Creek Farms. All rights reserved.
             </p>

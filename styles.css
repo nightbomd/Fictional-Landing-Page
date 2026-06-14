@@ -594,6 +594,10 @@ a {
 .quadrant:hover img {
     transform: scale(1.1);
 }
+.contact-form {
+    color: black !important;
+}
+
 @media (max-width: 768px) {
 
 

@@ -19,7 +19,7 @@
 
 <body>
     <header>
-         <nav id="navbar" class="navbar navbar-expand-lg d-flex align-items-center ">
+        <nav id="navbar" class="navbar navbar-expand-lg d-flex align-items-center ">
             <div class="container-fluid">
 
                 <img class="logo-img img-fluid" src="./Client Files/Client Files/Logos/logo-main-full-color.png"
@@ -76,7 +76,12 @@
         </nav>
     </header>
     <main>
-        <div class=" p-5 bg-green ">
+        <div class=" p-5 " style="min-height: 80vh; 
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                        url('./Client Files/Client Files/Placeholder Images/photo-farm-to-table-dinner-string-lights-barn.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;">>
 
 
             <div class="container">
@@ -85,8 +90,8 @@
 
 
                     <div class="col-lg-6">
-                        <h1 class="mb-4">Seasonal Highlights</h1>
-                        <p>
+                        <h1 class="mb-4 text-white">Seasonal Highlights</h1>
+                        <p class="text-light">
                             Discover the best activities, products, and events for each season.
                             Whether you're looking for summer fun, cozy fall experiences,
                             winter wonderlands, or springtime adventures, we've got you
@@ -99,62 +104,125 @@
                     <div class="col-lg-6 text-center">
                         <div class="pie-gallery mx-auto shadow">
                             <div class="quadrant">
-                                <img src="./Client Files/Client Files/Placeholder Images/photo-wreaths-christmas-trees-winter-market.png"
-                                    class="w-100 h-100" alt="">
+                                <a href="#winter"><img src="./Client Files/Client Files/Placeholder Images/photo-wreaths-christmas-trees-winter-market.png"
+                                    class="w-100 h-100" alt=""></a>
                             </div>
 
                             <div class="quadrant">
-                                <img src="./Client Files/Client Files/Placeholder Images/photo-farm-to-table-dinner-string-lights-barn.png"
-                                    class="w-100 h-100" alt="">
+                                <a href="#spring"><img src="./Client Files/Client Files/Placeholder Images/photo-farm-to-table-dinner-string-lights-barn.png"
+                                    class="w-100 h-100" alt=""></a>
                             </div>
 
                             <div class="quadrant">
-                                <img src="./Client Files/Client Files/Placeholder Images/photo-pumpkins-gourds-haybales-barn-door.png"
-                                    class="w-100 h-100" alt="">
+                                <a href="#fall"><img src="./Client Files/Client Files/Placeholder Images/photo-pumpkins-gourds-haybales-barn-door.png"
+                                    class="w-100 h-100" alt=""></a>
                             </div>
 
                             <div class="quadrant">
-                                <img src="./Client Files/Client Files/Placeholder Images/photo-fresh-vegetables-basket-outdoor.png"
-                                    class="w-100 h-100" alt="">
+                                <a href="#summer"><img src="./Client Files/Client Files/Placeholder Images/photo-fresh-vegetables-basket-outdoor.png"
+                                    class="w-100 h-100" alt=""></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row g-4 my-4">
+        <div class="container py-5">
+            <div class="row g-5" id="winter">
+
                 <div class="col-12">
-                    <h2>Winter</h2>
-                    <p>Experience the magic of winter with festive markets, cozy firesides, and snowy adventures. From
-                        ice skating to holiday shopping, winter offers a unique blend of relaxation and excitement.</p>
-                    <div class="d-flex align-items-center">
-                        <img src="./Client Files/Client Files/Placeholder Images/photo-wreaths-christmas-trees-winter-market.png"
-                            alt="Winter Image" class="img-fluid rounded shadow me-3" style="max-width: 15vw;">
-                        <img src="./Client Files/Client Files/Events/event-christmas-tree-farm-choose-cut.png"
-                            alt="Winter Activities Image" class="img-fluid me-3 rounded shadow" style="max-width: 15vw">
-                        <img src="./Client Files/Client Files/Events/event-holiday-market-barn-lights-winter.png"
-                            alt="Winter Activities Image" class="img-fluid rounded shadow" style="max-width: 15vw">
+                    <div class="card h-100 border-0 shadow p-4 bg-light">
+                        <h2 class="fw-bold display-6 mb-3">Winter</h2>
+                        <p class="text-muted fs-5 mb-4">Experience the magic of winter with festive markets, cozy
+                            firesides, and snowy adventures.</p>
+
+                        <div class="d-flex flex-nowrap gap-3 overflow-auto pb-3 scrollbar-custom">
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Placeholder Images/photo-wreaths-christmas-trees-winter-market.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Winter Market">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Events/event-christmas-tree-farm-choose-cut.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Christmas Tree Farm">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Events/event-holiday-market-barn-lights-winter.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Holiday Barn Market">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <h2>Spring</h2>
-                    <p>Embrace the renewal of spring with blooming gardens, outdoor festivals, and fresh farm-to-table
-                        dining. It's the perfect time to explore nature, try new recipes, and celebrate the season of
-                        growth.</p>
+
+                <div class="col-12" id="spring">
+                    <div class="card h-100 border-0 shadow p-4 bg-light">
+                        <h2 class="fw-bold display-6 mb-3">Spring</h2>
+                        <p class="text-muted fs-5 mb-4">Embrace the renewal of spring with blooming gardens, outdoor
+                            festivals, and fresh farm-to-table dining.</p>
+
+                        <div class="d-flex flex-nowrap gap-3 overflow-auto pb-3 scrollbar-custom">
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Placeholder Images/photo-family-walking-sunflower-field.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Sunflower Field">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Placeholder Images/photo-fresh-vegetables-basket-outdoor.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Fresh Vegetables">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Placeholder Images/photo-apple-cider-donuts-fall-table.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Apple Cider Donuts">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <h2>Summer</h2>
-                    <p>Make the most of summer with beach days, outdoor concerts, and vibrant festivals. Whether you're
-                        looking for relaxation or adventure, summer offers endless opportunities for fun in the sun.</p>
+
+                <div class="col-12" id="summer">
+                    <div class="card h-100 border-0 shadow p-4 bg-light">
+                        <h2 class="fw-bold display-6 mb-3">Summer</h2>
+                        <p class="text-muted fs-5 mb-4">Make the most of summer with beach days, outdoor concerts, and
+                            vibrant festivals. Whether you're looking for relaxation or adventure, summer offers endless
+                            opportunities for fun in the sun.</p>
+
+                        <div class="d-flex flex-nowrap gap-3 overflow-auto pb-3 scrollbar-custom">
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Events/event-baby-animals-goats-chicks-spring.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Baby Farm Animals">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Events/event-hayride-tractor-wagon-sunset.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Sunset Hayride">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Events/event-strawberry-upick-child-basket.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Strawberry U-Pick">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <h2>Fall</h2>
-                    <p>Enjoy the beauty of fall with colorful foliage, pumpkin patches, and harvest festivals. It's the
-                        perfect season for cozy sweaters, warm drinks, and outdoor activities that celebrate the bounty
-                        of
-                        nature.</p>
+
+                <div class="col-12" id="fall">
+                    <div class="card h-100 border-0 shadow p-4 bg-light">
+                        <h2 class="fw-bold display-6 mb-3">Fall</h2>
+                        <p class="text-muted fs-5 mb-4">Experience the beauty of fall with vibrant foliage, apple
+                            picking, and cozy harvest festivals.</p>
+
+                        <div class="d-flex flex-nowrap gap-3 overflow-auto pb-3 scrollbar-custom">
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Placeholder Images/photo-pumpkins-gourds-haybales-barn-door.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Pumpkins and Barn Door">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Events/event-pumpkin-patch-father-son-wagon.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Pumpkin Patch Family Visit">
+                            </div>
+                            <div class="flex-shrink-0" style="width: 280px; max-width: 75%;">
+                                <img src="./Client Files/Client Files/Events/event-apple-cider-pressing-family.png"
+                                    class="img-fluid rounded-3 shadow-sm w-100" alt="Apple Cider Pressing">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 

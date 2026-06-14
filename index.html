@@ -19,7 +19,7 @@
 
 <body>
 
-   
+
     <header>
         <nav id="navbar" class="navbar navbar-expand-lg d-flex align-items-center ">
             <div class="container-fluid">
@@ -86,57 +86,47 @@
 
 </html>
 
-<div id="carouselExampleIndicators" class=" carousel slide shadow-lg clear  " data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-            aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-            aria-label="Slide 6"></button>
+<div class="container-fluid g-0 position-relative" style="min-height: 70vh; 
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35)), 
+                        url('./Client Files/Client Files/Hero Imgs/hero-farm-store-exterior-summer.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;">
+
+    <div class="row g-0 h-100">
+        <div class="col-12 d-flex flex-column justify-content-center p-5 h-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-9 col-lg-7 text-white">
+
+                        <span class="text-uppercase tracking-wider text-warning fw-bold small mb-2 d-block">Welcome to
+                            the Farm</span>
+
+                        <h1 class="display-4 fw-bold mb-3 text-shadow">Hollow Creek Farms</h1>
+
+                        <p class="lead opacity-90 mb-4 fs-4">
+                            Fresh farm-to-table flavors, homegrown seasonal events, and lasting family traditions in the
+                            heart of the countryside.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3 mt-3">
+                            <a href="activities.html" class="btn btn-light btn-lg shadow-sm fw-semibold px-4">
+                                Explore Events
+                            </a>
+                            <a href="products.html" class="btn btn-outline-light btn-lg fw-semibold px-4">
+                                Shop Our Market
+                            </a>
+                            <a href="#visit-form" class="btn btn-light btn-lg shadow-sm fw-semibold px-4">
+                                Schedule a Visit
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="./Client Files/Client Files/Call-to-Action Banners/cta-book-farm-to-table-dinner.png"
-                class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="./Client Files/Client Files/Call-to-Action Banners/cta-explore-corn-maze-fall.png"
-                class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="./Client Files/Client Files/Call-to-Action Banners/cta-join-harvest-weekend-festival.png"
-                class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="./Client Files/Client Files/Call-to-Action Banners/cta-visit-farm-store-produce-display.png"
-                class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="./Client Files/Client Files/Call-to-Action Banners/cta-pick-your-own-pumpkins-fall.png"
-                class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="./Client Files/Client Files/Call-to-Action Banners/cta-plan-your-visit-entrance-gate.png"
-                class="d-block w-100" alt="...">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+
 </div>
 <div class="bg-beige p-5" style="position:relative; overflow:hidden;">
 
@@ -172,7 +162,7 @@
                 there's something for
                 everyone.</p>
             <div class="text-start">
-                <a class="text-start" href="about.html">Learn More →</a>
+                <a class="text-center btn btn-secondary col-12" href="about.html">Learn More →</a>
             </div>
         </div>
     </div>
@@ -185,7 +175,7 @@
                 from
                 the farm!</p>
             <div class="text-start">
-                <a class="text-start" href="products.html">View Products →</a>
+                <a class="text-center btn btn-outline-success col-12 " href="products.html">View Products →</a>
             </div>
         </div>
         <div class="col-6">
@@ -202,10 +192,12 @@
         <div class="col-6 clear observe p-5" data-animation="fadeUp">
             <h2 class="subheading text-start fs-1 fw-bold">Experience and Activities</h2>
             <hr>
-            <p class="fs-5 text-start">Join us for a variety of seasonal activities and experiences that showcase the beauty and charm of our farm. From hayrides to pumpkin patches, there's something for everyone to enjoy.</p>
+            <p class="fs-5 text-start">Join us for a variety of seasonal activities and experiences that showcase the
+                beauty and charm of our farm. From hayrides to pumpkin patches, there's something for everyone to enjoy.
+            </p>
             <div class="d-flex col-12 gap-5">
-                <a href="activities.html" class="btn btn-primary col-6">View Activities</a>
-                <a href="about.html" class="btn btn-secondary col-6">Learn More</a>
+                <a href="activities.html" class="btn btn-primary col-12">View Activities</a>
+               
             </div>
         </div>
     </div>
@@ -263,14 +255,17 @@
         </div>
     </div>
     <div class="text-center mb-5 ">
-        <a href="products.html" class="btn btn-primary  fs-5 rounded-3 clear observe" data-animation="fadeUp">Shop Now</button></a>
+        <a href="products.html" class="btn btn-primary  fs-5 rounded-3 clear observe" data-animation="fadeUp">Shop
+            Now</button></a>
     </div>
 
 
-    <div class="bg-white  w-100 shadow-lg" id="activities-section">
+    <div class="bg-white py-5 w-100 shadow-lg" id="activities-section">
         <div class="text-center">
-            <img src="./Client Files/Client Files/Placeholder Images/photo-children-feeding-goats-fence.png" style="border-radius: 50% !important; object-fit: cover;" class=" my-5 w-25 shadow m-auto clear observe"
-                data-animation="scale" alt="Sun Creek Logo">
+            <img src="./Client Files/Client Files/Placeholder Images/photo-children-feeding-goats-fence.png"
+                style="border-radius: 50% !important; object-fit: cover; aspect-ratio: 1 / 1;"
+                class="my-5 w-50 w-md-50 w-lg-25 shadow d-block m-auto clear observe" data-animation="scale"
+                alt="Sun Creek Logo">
         </div>
         <h2 class="text-center  fs-1 fw-bold mb-5 observe clear" data-animation="fadeUp">Activites</h2>
 
@@ -279,137 +274,134 @@
 
         </div>
 
-        <div class="bg-red d-flex mt-5 upcoming-section">
+        <div class="container-fluid g-0 mt-5 bg-red">
+            <div class="row g-0 upcoming-section">
 
-            <!-- Left Side -->
-            <div class="position-relative w-50">
+                <div class="col-12 col-md-6 position-relative" style="min-height: 400px;">
 
-                <img src="./Client Files/Client Files/Placeholder Images/photo-hayride-tractor-gravel-road-barn.png"
-                    class="w-100 h-100 object-fit-cover" alt="Hayride">
+                    <img src="./Client Files/Client Files/Placeholder Images/photo-hayride-tractor-gravel-road-barn.png"
+                        class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Hayride">
 
-                <div class="overlay"></div>
+                    <div class="overlay"></div>
 
-                <div class="overlay-content">
-                    <p class="fw-bold fs-1" style="color: rgb(241, 139, 139);">
-                        Since 2025!
-                    </p>
-                    <p class="fw-bold fs-2">
-                        More activities coming soon! Stay tuned for updates.
-                    </p>
+                    <div class="overlay-content p-5 d-flex flex-column justify-content-center h-100 position-relative"
+                        style="z-index: 2;">
+                        <p class="fw-bold display-5" style="color: rgb(241, 139, 139);">
+                            Since 2025!
+                        </p>
+                        <p class="fw-bold fs-3 text-white">
+                            More activities coming soon! Stay tuned for updates.
+                        </p>
+                        <a href="about.html" class="btn btn-secondary btn-lg align-self-start mt-3 shadow-sm">
+                            Learn More
+                        </a>
+                    </div>
 
-                    <a href="about.html" class="btn btn-secondary">
-                        Learn More
-                    </button></a>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center p-5 text-white">
+
+                    <h2 class="text-center mb-4 fw-bold display-6">
+                        In Season Activities
+                    </h2>
+
+                    <ul class="fs-4 text-center list-unstyled lh-lg">
+                        <li>Sunflower U-Pick – June 1-August 31</li>
+                        <li>Blueberry U-Pick – June 1-August 1</li>
+                        <li>Farm-To-Table Dinner – June 1-July 31</li>
+                    </ul>
+
                 </div>
 
             </div>
+        </div>
 
-            <!-- Right Side -->
-            <div class="w-50 d-flex flex-column justify-content-center">
-                
-               
-                <h2 class="text-center mb-4   fw-bold" style="font-size: 3.5rem;">
-                    In Season Activites
-                </h2>
 
-                <ul class="fs-5 text-center list-unstyled">
-                    <li>Sunflower U-Pick - June 1-August 31</li>
-                    <li>Blueberry U-Pick - June 1-August 1</li>
-                    <li>Farm-To-Table Dinner June 1 - July 31</li>
-                </ul>
+        <div class="dif-color bg-brown observe p-5" data-animation="expand">
+
+            <div class="row justify-content-center align-items-center mb-5">
+
+                <section id="visit-form" class="col-12 col-md-6 col-lg-5 p-5 clear observe" data-animation="fadeUp">
+                    <h2 class="text-center mb-4 fs-1 fw-bold">Schedule a Visit</h2>
+                    <form class="col-12 col-md-10 m-auto">
+                        <div class="mb-3">
+                            <label for="PhoneNumber" class="form-label">Phone Number*</label>
+                            <input type="text" class="form-control" id="PhoneNumber" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <select class="form-select" id="location" required>
+                                <option value="">Location</option>
+                                <option value="option1">East</option>
+                                <option value="option2">West</option>
+                                <option value="option3">South</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn  w-100 btn-black mt-4">Submit</button>
+                    </form>
+                </section>
+
+                <section id="open-hours" class="col-12 col-md-6 col-lg-5 p-4 clear observe" data-animation="fadeUp">
+                    <div class="bg-white p-4 rounded-4 shadow-sm border">
+                        <h2 class="text-center fw-bold text-dark fs-2 mb-4">Open Hours</h2>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th class="ps-3">Day</th>
+                                        <th class="text-center">Open</th>
+                                        <th class="text-center">Close</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold ps-3">Monday</td>
+                                        <td class="text-center text-muted">9:00 AM</td>
+                                        <td class="text-center text-muted">5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold ps-3">Tuesday</td>
+                                        <td class="text-center text-muted">9:00 AM</td>
+                                        <td class="text-center text-muted">5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold ps-3">Wednesday</td>
+                                        <td class="text-center text-muted">9:00 AM</td>
+                                        <td class="text-center text-muted">5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold ps-3">Thursday</td>
+                                        <td class="text-center text-muted">9:00 AM</td>
+                                        <td class="text-center text-muted">5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold ps-3">Friday</td>
+                                        <td class="text-center text-muted">9:00 AM</td>
+                                        <td class="text-center text-muted">5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold ps-3">Saturday</td>
+                                        <td class="text-center text-muted">10:00 AM</td>
+                                        <td class="text-center text-muted">4:00 PM</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <td class="fw-semibold text-danger ps-3">Sunday</td>
+                                        <td colspan="2" class="text-center fw-bold text-danger">Closed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
             </div>
 
         </div>
-
-    </div>
-
-
-
-    <div class="dif-color bg-brown observe p-5" data-animation="expand">
-
-        <div class="row justify-content-center align-items-center mb-5">
-
-            <section id="visit-form" class="col-12 col-md-6 col-lg-5 p-5 clear observe" data-animation="fadeUp">
-                <h2 class="text-center mb-4 fs-1 fw-bold">Schedule a Visit</h2>
-                <form class="col-12 col-md-10 m-auto">
-                    <div class="mb-3">
-                        <label for="PhoneNumber" class="form-label">Phone Number*</label>
-                        <input type="text" class="form-control" id="PhoneNumber" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email*</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="location" class="form-label">Location</label>
-                        <select class="form-select" id="location" required>
-                            <option value="">Location</option>
-                            <option value="option1">East</option>
-                            <option value="option2">West</option>
-                            <option value="option3">South</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn  w-100 btn-black mt-4">Submit</button>
-                </form>
-            </section>
-
-         <section id="open-hours" class="col-12 col-md-6 col-lg-5 p-4 clear observe" data-animation="fadeUp">
-    <div class="bg-white p-4 rounded-4 shadow-sm border">
-        <h2 class="text-center fw-bold text-dark fs-2 mb-4">Open Hours</h2>
-        
-        <div class="table-responsive">
-            <table class="table table-hover align-middle mb-0">
-                <thead class="table-dark">
-                    <tr>
-                        <th class="ps-3">Day</th>
-                        <th class="text-center">Open</th>
-                        <th class="text-center">Close</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-semibold ps-3">Monday</td>
-                        <td class="text-center text-muted">9:00 AM</td>
-                        <td class="text-center text-muted">5:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td class="fw-semibold ps-3">Tuesday</td>
-                        <td class="text-center text-muted">9:00 AM</td>
-                        <td class="text-center text-muted">5:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td class="fw-semibold ps-3">Wednesday</td>
-                        <td class="text-center text-muted">9:00 AM</td>
-                        <td class="text-center text-muted">5:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td class="fw-semibold ps-3">Thursday</td>
-                        <td class="text-center text-muted">9:00 AM</td>
-                        <td class="text-center text-muted">5:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td class="fw-semibold ps-3">Friday</td>
-                        <td class="text-center text-muted">9:00 AM</td>
-                        <td class="text-center text-muted">5:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td class="fw-semibold ps-3">Saturday</td>
-                        <td class="text-center text-muted">10:00 AM</td>
-                        <td class="text-center text-muted">4:00 PM</td>
-                    </tr>
-                    <tr class="table-light">
-                        <td class="fw-semibold text-danger ps-3">Sunday</td>
-                        <td colspan="2" class="text-center fw-bold text-danger">Closed</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
-        </div>
-
-    </div>
 
     </div>
 </main>
