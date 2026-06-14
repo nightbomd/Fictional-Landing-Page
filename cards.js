@@ -172,7 +172,7 @@ const activities = [
 function createProductCard(product, index) {
     const container = document.createElement('div');
     container.className =
-        'product-container d-flex m-auto my-5 shadow align-items-center text-center p-5 justify-content-center gap-5 observe';
+        'product-container d-flex m-auto my-5 shadow align-items-center text-center p-5 justify-content-center gap-5 ';
     container.dataset.animation = 'scale';
 
     if (product.background) {
