@@ -349,22 +349,31 @@ if (productsSection) {
     });
 };
 
-document.getElementById("season-select").addEventListener("change", (e) => {
-    const selectedSeason = e.target.value.toLowerCase();
-    const filteredActivities =
-        selectedSeason === "season"
-            ? activities
-            : activities.filter(
-                activity => activity.season.toLowerCase() === selectedSeason
-            );
+const seasonSelect = document.getElementById("season-select");
 
-    displayActivities(mainContainer, filteredActivities);
+if (seasonSelect) {
+    seasonSelect.addEventListener("change", (e) => {
+        const selectedSeason = e.target.value.toLowerCase();
+        const filteredActivities =
+            selectedSeason === "season"
+                ? activities
+                : activities.filter(
+                    activity => activity.season.toLowerCase() === selectedSeason
+                );
 
-    console.log(filteredActivities);
-    console.log(selectedSeason);
-    displayActivities(mainContainer, filteredActivities);
-});
-document.getElementById("search-input").addEventListener("input", (e) => {
+        displayActivities(mainContainer, filteredActivities);
+
+        console.log(filteredActivities);
+        console.log(selectedSeason);
+        
+    });
+}
+    
+
+const searchInput = document.getElementById("search-input")
+
+if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
     const searchTerm = e.target.value.toLowerCase();
     const filteredActivities = activities.filter(activity => activity.name.toLowerCase().includes(searchTerm));
 
@@ -372,3 +381,4 @@ document.getElementById("search-input").addEventListener("input", (e) => {
     console.log(searchTerm);
     displayActivities(mainContainer, filteredActivities);
 });
+}
