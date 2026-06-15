@@ -2,37 +2,37 @@ const siteIndex = [
     {
         title: "Home Page",
         description: "Welcome to our company website. Learn about our mission and core values. Plan a visit if you have too",
-        url: "/index.html",
+        url: "./index.html",
         keywords: "home welcome main about page visit schedule open hours"
     },
     {
         title: "List of Products",
         description: "We offer a variety of fresh produce, homemade goods, and seasonal items.",
-        url: "/products.html",
+        url: "./products.html",
         keywords: "products farm fresh organic seasonal apple cider honey eggs jam shop farm store strawberry bread "
     },
     {
         title: "Contact Us",
         description: "Get in touch with our support team or request a quote. Located in Point Pleasant.",
-        url: "/contact.html",
+        url: "./contact.html",
         keywords: "contact email phone location support help address"
     },
     {
         title: "Activites Page",
         description: "Join us for a variety of fun and engaging activities throughout the year.",
-        url: "/activities.html",
+        url: "./activities.html",
         keywords: "activities events fun things to do family friendly tractor blueberry apple picking pumpkin picking animals petting zoo christmas christmas tree lighting winter winter shop farm dinner corn maze "
     },
     {
         title: "Seasonal Highlights",
         description: "Discover the unique flavors and events each season brings to our farm.",
-        url: "/Seasons.html",
+        url: "./Seasons.html",
         keywords: "seasonal highlights events farm fresh produce autumn winter spring summer"
     },
     {
         title: "About page",
         description: "Learn more about our company, our values, and our team.",
-        url: "/about.html",
+        url: "./about.html",
         keywords: "about company values team family family tree history"
     }
 ];
