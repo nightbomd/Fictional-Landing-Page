@@ -37,6 +37,7 @@ const siteIndex = [
     }
 ];
 
+
 const searchVal = document.getElementById("search-input");
 const resultsContainer = document.getElementById('resultsContainer');
 
