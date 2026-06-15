@@ -400,3 +400,120 @@ if (searchInput) {
     displayActivities(mainContainer, filteredActivities);
 });
 }
+function createProductModal(index) {
+   // Select just the single product matching the clicked button's index
+   const product = productContainers[index];
+  
+   // Safety check just in case the index doesn't exist
+   if (!product) return '';
+
+
+   const title = product.name || "Blue-Berry Jam";
+   const description = product.description || "Discover our range of fresh, locally-sourced goods.";
+   const imgSrc = product.image || "./Client Files/Client Files/productPhotos/product-blueberry-preserves-jar.png";
+   const price = "$67:69";
+
+
+   // Return just the single string template (no .map() or .join('') needed!)
+   return `
+       <div class="product-modal-card" id="modal-${product.id}" style="
+           background-color: #FAF3E0;
+           font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           width: 100%;
+           max-width: 550px;
+           display: flex;
+           align-items: center;
+           gap: 30px;
+           padding: 30px;
+           border-radius: 12px;
+           box-sizing: border-box;
+       ">
+           <div class="modal-img-container" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+               <img src="${imgSrc}" alt="${title}" style="max-width: 100%; height: auto; object-fit: contain;">
+           </div>
+
+
+           <div class="modal-details-container" style="flex: 1.2; display: flex; flex-direction: column; justify-content: center;">
+               <h2 style="color: #1A4329; font-size: 32px; font-weight: 700; margin: 0 0 12px 0; border-bottom: 2px solid #D6D2C4; padding-bottom: 8px;">
+                   ${title}
+               </h2>
+               <p style="color: #000000; font-size: 14px; font-weight: 700; line-height: 1.4; margin: 0 0 20px 0;">
+                   ${description}
+               </p>
+               <div style="color: #39E739; font-size: 36px; font-weight: 800; margin: 0 0 20px 0; border-bottom: 2px solid #D6D2C4; padding-bottom: 12px;">
+                   ${price}
+               </div>
+               <div style="display: flex; align-items: center; gap: 12px;">
+                   <div style="display: flex; align-items: center; justify-content: space-between; border: 2px solid #1A4329; border-radius: 25px; padding: 6px 16px; width: 110px; height: 42px; box-sizing: border-box; background: #FFFFFF;">
+                       <button class="qty-btn" onclick="this.nextElementSibling.innerText = Math.max(1, parseInt(this.nextElementSibling.innerText) - 1)" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #1A4329; font-weight: bold; padding: 0; line-height: 1;">&minus;</button>
+                       <span style="font-size: 16px; font-weight: bold; color: #1A4329;">1</span>
+                       <button class="qty-btn" onclick="this.previousElementSibling.innerText = parseInt(this.previousElementSibling.innerText) + 1" style="background: none; border: none; font-size: 18px; cursor: pointer; color: #1A4329; font-weight: bold; padding: 0; line-height: 1;">&#43;</button>
+                   </div>
+                   <button style="background-color: #1A4329; color: #FFFFFF; font-size: 16px; font-weight: 700; border: none; border-radius: 25px; padding: 0 24px; height: 42px; cursor: pointer; flex-grow: 1;">
+                       Add to cart
+                   </button>
+               </div>
+           </div>
+       </div>
+   `;
+}
+
+
+// Grab the overlay container we just created
+const modalOverlay = document.getElementById("product-modal-overlay");
+
+
+document.querySelectorAll(".detail").forEach((btn, index) => {
+   btn.addEventListener("click", () => {
+       // 1. Generate the product HTML string
+       const singleModalHtml = createProductModal(index);
+      
+       // 2. Inject it into the overlay container
+       modalOverlay.innerHTML = singleModalHtml;
+      
+       // 3. Select the freshly rendered modal card element
+       const modalElement = modalOverlay.querySelector(".product-modal-card");
+      
+       // 4. Reveal the overlay overlay wrapper
+       modalOverlay.style.display = "flex";
+
+
+       // 5. Fire your scale animation directly on the element
+       modalElement.animate([
+           { opacity: 0, transform: "scale(0)" },
+           { opacity: 1, transform: "scale(1)" }
+       ], {
+           duration: 200,
+           easing: "ease-out",
+           fill: "forwards"
+       });
+   });
+});
+
+
+// Close click handler with a matching smooth scale-down exit animation
+modalOverlay.addEventListener("click", (e) => {
+   if (e.target === modalOverlay) {
+       const modalElement = modalOverlay.querySelector(".product-modal-card");
+
+
+       if (modalElement) {
+           // Run scale out keyframes
+           const closeAnim = modalElement.animate([
+               { opacity: 1, transform: "scale(1)" },
+               { opacity: 0, transform: "scale(0)" }
+           ], {
+               duration: 200,
+               easing: "ease-in",
+               fill: "forwards"
+           });
+
+
+           // Hide overlay box entirely after the visual scaling finishes
+           closeAnim.onfinish = () => {
+               modalOverlay.style.display = "none";
+               modalOverlay.innerHTML = "";
+           };
+       }
+   }
+});
