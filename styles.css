@@ -597,7 +597,17 @@ a {
 .contact-form {
     color: black !important;
 }
-
+.fs-1 {
+    font-size: 3rem !important;
+}
+.search-results-box {
+    position: absolute;
+    width: 100%;
+    max-height: 250px; /* Adjust this height to whatever feels right for your design */
+    overflow-y: auto;  /* Adds the scrollbar automatically ONLY when content overflows */
+    z-index: 1000;
+    display: none; 
+}
 @media (max-width: 768px) {
 
 
