@@ -1,6 +1,6 @@
 const productContainers = [
     {
-        id: 'product1',
+        id: 'product-1',
         name: 'Blueberry Preserves',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-blueberry-preserves-jar.png',
@@ -9,7 +9,7 @@ const productContainers = [
         review: '⭐'.repeat(4)
     },
     {
-        id: 'product2',
+        id: 'product-2',
         name: 'Apple Pie',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-apple-pie-bakery.png',
@@ -18,7 +18,7 @@ const productContainers = [
         review: '⭐'.repeat(3)
     },
     {
-        id: 'product3',
+        id: 'product-3',
         name: 'Apple Cider',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-fresh-apple-cider-jug.png',
@@ -27,7 +27,7 @@ const productContainers = [
         review: '⭐'.repeat(5)
     },
     {
-        id: 'product4',
+        id: 'product-4',
         name: 'Fresh Eggs',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-fresh-eggs-dozen-carton.png',
@@ -36,7 +36,7 @@ const productContainers = [
         review: '⭐'.repeat(4)
     },
     {
-        id: 'product5',
+        id: 'product-5',
         name: 'Raw Honey',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-raw-honey-jar.png',
@@ -45,7 +45,7 @@ const productContainers = [
         review: '⭐'.repeat(2)
     },
     {
-        id: 'product6',
+        id: 'product-6',
         name: 'Produce Basket',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-seasonal-produce-basket.png',
@@ -54,7 +54,7 @@ const productContainers = [
         review: '⭐'.repeat(3)
     },
     {
-        id: 'product7',
+        id: 'product-7',
         name: 'Sourdough Bread',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-sourdough-bread-loaf.png',
@@ -63,7 +63,7 @@ const productContainers = [
         review: '⭐'.repeat(4)
     },
     {
-        id: 'product8',
+        id: 'product-8',
         name: 'Strawberry Preserves',
         description: 'Discover our range of fresh, locally-sourced goods.',
         image: './Client Files/Client Files/productPhotos/product-strawberry-preserves-jar.png',
@@ -75,7 +75,7 @@ const productContainers = [
 
 const activities = [
     {
-        id: 'activity1',
+        id: 'activity-1',
         name: 'Apple Cider Pressing',
         description: 'Experience the joy of harvesting fresh apples and pressing delicious cider with the family.',
         image: './Client Files/Client Files/Events/event-apple-cider-pressing-family.png',
@@ -84,7 +84,7 @@ const activities = [
         season: 'Fall',
     },
     {
-        id: 'activity2',
+        id: 'activity-2',
         name: 'Baby Animals Petting Zoo',
         description: 'Interact with and learn about our adorable baby goats and chicks arriving this spring.',
         image: './Client Files/Client Files/Events/event-baby-animals-goats-chicks-spring.png',
@@ -93,7 +93,7 @@ const activities = [
         season: 'Spring',
     },
     {
-        id: 'activity3',
+        id: 'activity-3',
         name: 'Blueberry U-Pick',
         description: 'Gather the family to harvest plump, juicy blueberries directly from our summer patches.',
         image: './Client Files/Client Files/Events/event-blueberry-upick-family-summer.png',
@@ -102,7 +102,7 @@ const activities = [
         season: 'Summer',
     },
     {
-        id: 'activity4',
+        id: 'activity-4',
         name: 'Christmas Tree Farm',
         description: 'Explore the fields to choose and cut your own perfect tree for the holiday season.',
         image: './Client Files/Client Files/Events/event-christmas-tree-farm-choose-cut.png',
@@ -111,7 +111,7 @@ const activities = [
         season: 'Winter',
     },
     {
-        id: 'activity5',
+        id: 'activity-5',
         name: 'Corn Maze Adventure',
         description: 'Gather the whole family and see if you can navigate your way through our massive corn maze entrance.',
         image: './Client Files/Client Files/Events/event-corn-maze-entrance-family.png',
@@ -120,7 +120,7 @@ const activities = [
         season: 'Fall',
     },
     {
-        id: 'activity6',
+        id: 'activity-6',
         name: 'Fall Harvest Festival',
         description: 'Join the festival crowds for a celebration of local food, crafts, and classic autumn fun.',
         image: './Client Files/Client Files/Events/event-fall-harvest-festival-crowds.png',
@@ -129,7 +129,7 @@ const activities = [
         season: 'Fall',
     },
     {
-        id: 'activity7',
+        id: 'activity-7',
         name: 'Farm-to-Table Dinner',
         description: 'Enjoy an open-air dining experience featuring fresh farm ingredients under beautiful string lights.',
         image: './Client Files/Client Files/Events/event-farm-to-table-dinner-string-lights.png',
@@ -138,7 +138,7 @@ const activities = [
         season: 'Summer',
     },
     {
-        id: 'activity8',
+        id: 'activity-8',
         name: 'Tractor Wagon Hayride',
         description: 'Take a relaxing tractor-pulled wagon ride across the farm landscape during a beautiful sunset.',
         image: './Client Files/Client Files/Events/event-hayride-tractor-wagon-sunset.png',
@@ -148,7 +148,7 @@ const activities = [
         season: 'Fall',
     },
     {
-        id: 'activity9',
+        id: 'activity-9',
         name: 'Holiday Market',
         description: 'Shop local artisan crafts and gifts inside our cozy, glowing winter barn.',
         image: './Client Files/Client Files/Events/event-holiday-market-barn-lights-winter.png',
@@ -157,7 +157,7 @@ const activities = [
         season: 'Winter',
     },
     {
-        id: 'activity10',
+        id: 'activity-10',
         name: 'Pumpkin Patch',
         description: 'Take a wagon ride out to the field with family to pick out the perfect pumpkin.',
         image: './Client Files/Client Files/Events/event-pumpkin-patch-father-son-wagon.png',
@@ -166,7 +166,7 @@ const activities = [
         season: 'Fall',
     },
     {
-        id: 'activity11',
+        id: 'activity-11',
         name: 'Strawberry U-Pick',
         description: 'Bring the kids along to fill baskets with sweet, sun-ripened strawberries.',
         image: './Client Files/Client Files/Events/event-strawberry-upick-child-basket.png',
@@ -175,7 +175,7 @@ const activities = [
         season: 'Spring',
     },
     {
-        id: 'activity12',
+        id: 'activity-12',
         name: 'Sunflower U-Pick',
         description: 'Stroll through picturesque fields to harvest fresh sunflowers at sunset.',
         image: './Client Files/Client Files/Events/event-sunflower-upick-family-sunset.png',
@@ -191,7 +191,8 @@ function createProductCard(product, index) {
     container.className =
         'product-container row g-4 m-auto my-5 shadow align-items-center text-center p-4 p-md-5 justify-content-center product';
     container.dataset.animation = 'scale';
-    container.dataset.index
+    container.dataset.index = index;
+    container.id = `product-${index + 1}`;
 
     if (product.background) {
         container.style.backgroundColor = product.background;
@@ -221,7 +222,7 @@ function createProductCard(product, index) {
 
     const heading = document.createElement('h2');
     // Changed text-start to display-6 for cleaner responsive title scaling
-    heading.className = `${product.id === "product8" ? "text-dark" : "subheading"} fw-bold display-6 text-center text-md-start`;
+    heading.className = `${product.id === "product-8" ? "text-dark" : "subheading"} fw-bold display-6 text-center text-md-start`;
     heading.textContent = product.name;
 
     const description = document.createElement('p');
@@ -274,7 +275,7 @@ function displayActivities(container, array) {
                         <p class="text-start">${activity.description}</p>
                         <br>
                         <div class="text-start mt-auto">
-                            <a href="#" style="color: ${activity.color || 'black'} !important;" class="fs-5">View → </a>
+                            <a href="activities.html#${activity.id}" style="color: ${activity.color || 'black'} !important;" class="fs-5">View → </a>
                         </div>
                     </div>
                 </div>
@@ -530,31 +531,32 @@ document.querySelectorAll(".detail").forEach((btn, index) => {
     });
 });
 
-
-// Close click handler with a matching smooth scale-down exit animation
-modalOverlay.addEventListener("click", (e) => {
-    if (e.target === modalOverlay) {
-        const modalElement = modalOverlay.querySelector(".product-modal-card");
-
-
-        if (modalElement) {
-            // Run scale out keyframes
-            const closeAnim = modalElement.animate([
-                { opacity: 1, transform: "scale(1)" },
-                { opacity: 0, transform: "scale(0)" }
-            ], {
-                duration: 200,
-                easing: "ease-in",
-                fill: "forwards"
-            });
+if (modalOverlay) {
+    // Close click handler with a matching smooth scale-down exit animation
+    modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) {
+            const modalElement = modalOverlay.querySelector(".product-modal-card");
 
 
-            // Hide overlay box entirely after the visual scaling finishes
-            closeAnim.onfinish = () => {
-                modalOverlay.style.display = "none";
-                modalOverlay.innerHTML = "";
-            };
+            if (modalElement) {
+                // Run scale out keyframes
+                const closeAnim = modalElement.animate([
+                    { opacity: 1, transform: "scale(1)" },
+                    { opacity: 0, transform: "scale(0)" }
+                ], {
+                    duration: 200,
+                    easing: "ease-in",
+                    fill: "forwards"
+                });
+
+
+                // Hide overlay box entirely after the visual scaling finishes
+                closeAnim.onfinish = () => {
+                    modalOverlay.style.display = "none";
+                    modalOverlay.innerHTML = "";
+                };
+            }
         }
-    }
-});
+    });
 
+}
