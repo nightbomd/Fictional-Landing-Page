@@ -600,6 +600,31 @@ a {
 .fs-1 {
     font-size: 3rem !important;
 }
+.farm-grid-card {
+        text-decoration: none !important;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    }
+    .farm-grid-card:hover {
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.155) !important;
+    }
+    .farm-grid-card img {
+        transition: transform 0.5s ease;
+        top: 0; left: 0;
+    }
+  
+    .card-overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.65));
+        transition: background 0.3s ease;
+    }
+    .farm-grid-card:hover .card-overlay {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+    }
+    .tracking-wider { letter-spacing: 0.1em; }
+    .tracking-widest { letter-spacing: 0.2em; }
+    .text-success-light { color: #a3e2a3; }
+
 .search-results-box {
     position: absolute;
     width: 100%;
