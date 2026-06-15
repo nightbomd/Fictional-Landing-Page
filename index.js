@@ -1,19 +1,4 @@
 
-const navbar = document.getElementById("navbar");
-
-function handleScroll(nav) {
-window.addEventListener("scroll", () => {
-  if (nav.classList.contains("transparent")) {
-
-    if (window.scrollY > 10) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  }
-});
-}
-handleScroll(navbar)
 
 
 const animations = {
