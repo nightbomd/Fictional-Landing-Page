@@ -3,37 +3,37 @@ const siteIndex = [
         title: "Home Page",
         description: "Welcome to our company website. Learn about our mission and core values. Plan a visit if you have too",
         url: "./index.html",
-        keywords: "home welcome main about page visit schedule open hours"
+        keywords: "home welcome main about page visit schedule open hours pictures photos view info more info"
     },
     {
         title: "List of Products",
         description: "We offer a variety of fresh produce, homemade goods, and seasonal items.",
         url: "./products.html",
-        keywords: "products farm fresh organic seasonal apple cider honey eggs jam shop farm store strawberry bread "
+        keywords: "products farm fresh organic seasonal apple cider honey eggs jam shop farm store strawberry bread cart shop season sourdough jam chickens produce vegetables fruit apple cider pie apple pie"
     },
     {
         title: "Contact Us",
         description: "Get in touch with our support team or request a quote. Located in Point Pleasant.",
         url: "./contact.html",
-        keywords: "contact email phone location support help address"
+        keywords: "contact email phone location support help address location more info request request info"
     },
     {
         title: "Activites Page",
         description: "Join us for a variety of fun and engaging activities throughout the year.",
         url: "./activities.html",
-        keywords: "activities events fun things to do family friendly tractor blueberry apple picking pumpkin picking animals petting zoo christmas christmas tree lighting winter winter shop farm dinner corn maze "
+        keywords: "activities events fun things to do family friendly tractor blueberry apple picking pumpkin picking animals petting zoo christmas christmas tree lighting winter winter shop farm dinner corn maze apple cider pressing goat festival fall christmas tree lighting tractor hayride pumpkin patch holiday market sunflower u pick strawbery u pick sunflower-u-pick strawberry-u-pick "
     },
     {
         title: "Seasonal Highlights",
         description: "Discover the unique flavors and events each season brings to our farm.",
         url: "./Seasons.html",
-        keywords: "seasonal highlights events farm fresh produce autumn winter spring summer"
+        keywords: "seasonal highlights events farm fresh produce autumn winter spring summer holiday market event"
     },
     {
         title: "About page",
         description: "Learn more about our company, our values, and our team.",
         url: "./about.html",
-        keywords: "about company values team family family tree history"
+        keywords: "about company values team family family tree history info more info find more learn more season activities products farm store locations schedule scheduling "
     }
 ];
 
