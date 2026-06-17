@@ -75,7 +75,9 @@ color: black !important;
 background: var(--color-cream);
 box-shadow: 0 2px 10px rgba(0,0,0,.1);
 }
-
+html {
+    scroll-behavior: auto !important;
+}
 .nav-link {
 font-family: var(--font-body);
 font-size: 1.1rem;
@@ -597,6 +599,31 @@ a {
 .contact-form {
     color: black !important;
 }
+.h-80vh {
+      height: 100vh;
+    }
+    /* Styling for the grid blocks based on the image description */
+    .grid-block {
+      background-color: #dbdbdb;
+      border-radius: 16px;            /* Border radius */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: #000;
+      height: 100%;                  /* Ensures blocks fill row heights */
+      min-height: 80px;
+      transition: background-color 0.3s ease;
+       background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+    }
+    .grid-block:hover {
+        opacity: 0.8;
+        transform: translateY(-5px);
+    }
 .fs-1 {
     font-size: 3rem !important;
 }
